@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ENSEPROG</title>
+	<link rel="icon" href="Imagenes/IconoESEPRO.webp">
+  <meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style-index.css">
+  <script src="https://kit.fontawesome.com/83480b7348.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body class="hidden">
+  <section class="section-loader" id="onload">
+  <!-- 
+  <div class="lavarropas">
+
+  </div>
+  -->
+  <div class="spinner">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</section>
+  <header class="header">
+    
+      <div class="navbar">
+
+       <a href="Index.html"><img class="logo" src="Imagenes/logoESEPRO.webp" alt="logo"> </a>
+
+        <ul class="ul-inicio">
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="HTML.html">HTML</a></li>
+          <li><a href="CSS.html">CSS</a></li>
+          <li><a href="PYTHON.html">PYTHON</a></li>
+        </ul>
+        
+      </div>
+    
+    
+  </header>
+  <video class="video-fondo" muted autoplay loop>
+    <source src="Video3.mp4" type="video/mp4">
+  </video>
+  
+  <!-- JAVASCRIPT -->
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header");
+      header.classList.toggle("abajo",window.scrollY>0);
+    })
+    window.onload = function(){
+      $('#onload'). fadeOut();
+      $('body'). removeClass('hidden');
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <section class="section-inicio">
+      <div class="container">
+        <h1>BIENVENIDO A <span class="span-inicio" style="font-family:'Avenir black';">ENSEPROG</span></h1>
+        <p>En esta página encontrarás información detallada sobre HTML, CSS y atajos útiles para el desarrollo web.<br>
+          Explora nuestra historia, tutoriales y ejemplos de código para aprender y mejorar tus habilidades en el mundo del desarrollo web.</p>
+        
+          <a href="HISTORIA.html"><button class="btn-destacado"><span>Historia</span></button></a>
+      </div>
+    </section>
+
+    <section class="section1">
+      <div class="coneiner-section1">
+          <p class="p-section1">
+            <span class="span-section1">Tu Camino en Programación</span>
+          </p>
+      </div>
+      <div class="conteiner-pasos">
+        
+        <div class="paso1">
+          <img class="img-pasos" src="Imagenes/PRIMERpaso-celeste-transparente.webp" alt="paso1">
+          <p class="título-paso1">
+            Aprende HTML
+          </p>
+          <p class="p-paso1">
+            Empezá desde cero y aprendé las bases de la programación.
+          </p>
+          <button class="button-paso1">
+            <a href="HTML.html">"Saber más"</a>
+          </button>
+        </div>
+
+        <img class="img-flecha" src="Imagenes/FLECHAdelospasos.webp" alt="">
+
+        <div class="paso1">
+          <img class="img-pasos" src="Imagenes/SEGUNDOpaso-celeste.webp" alt="paso2">
+          <p class="título-paso1">
+            ATAJOS
+          </p>
+          <p class="p-paso1">
+            Aprende los mejores atajos que te hará más fácil programar.
+          </p>
+          <button class="button-paso1">
+            <a href="Atajos.html">"Saber más"</a>
+          </button>
+        </div>
+
+        <img class="img-flecha" src="Imagenes/FLECHAdelospasos.webp" alt="">
+
+        <div class="paso1">
+          <img class="img-pasos" src="Imagenes/TERCERpaso-celeste.webp" alt="paso3">
+          <p class="título-paso1">
+           Aprende CSS
+          </p>
+          <p class="p-paso1">
+            Aprende a usar el pincel digital que da vida y estilo a las páginas web.
+          </p>
+          <button class="button-paso1">
+            <a href="CSS.html">"Saber más"</a>
+          </button>
+        </div>
+        <img class="img-flecha" src="Imagenes/FLECHAdelospasos.webp" alt="">
+        <div class="paso1">
+          <img class="img-pasos" src="Imagenes/CUARTOpaso-celeste.webp" alt="paso4">
+          <p class="título-paso1">
+            Haz tu propia web
+           </p>
+           <p class="p-paso1">
+             Con los conocimientos ya adquiridos puedes crear tu propia página web, un lienzo virtual donde plasmar tu visión y talento sin límite alguno
+           </p>
+           <button class="button-paso1">
+            <a href="">"Saber más"</a>
+           </button>
+        </div>
+
+      </div>
+    </section>
+
+
+<section class="section-que-es-HTML">
+    <div class="coneiner-section1">
+      <p class="p-section1">
+        <span><b>-</b> ¿Que es HTML?</span>
+      </p>
+    </div>
+    <div class="div-img-html">
+      
+        <img class="img-html" src="Imagenes/pexels-realtoughcandycom-11035371.webp" alt="HTML">
+      
+      <div>
+        <p style="color: white; font-size: 24px;">HTML (HyperText Markup Language) es el lenguaje de marcado estándar 
+                                                    <br>utilizado para crear y estructurar el contenido de 
+                                                    <br>las páginas web. Es la <b>base fundamental</b> de cualquier sitio web y   
+                                                    <br>se utiliza para describir<b> la estructura </b>y presentación de la 
+                                                    <br>información que se muestra en un navegador web.
+           <br>
+           <b style="font-size: 24px;">Basicamente define la ESTRUCTURA de la página web</b>
+        </p>
+      </div>
+    </div>
+</section>
+<section class="section-que-es-CSS">
+  <div class="coneiner-section3">
+    <p class="p-section3">
+      <span><b>-</b> ¿Que es CSS?</span>
+    </p>
+  </div>
+  <div class="div-img-CSS">
+    
+    <img class="img-CSS" src="Imagenes/800px-CSS.3.svg.webp" alt="CSS">
+    
+    <div>
+      <p style="color: white; font-size: 24px;"><br>CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado
+                                                  <br>para controlar la presentación y el formato de un documento HTML.
+                                                  <br>Se utiliza para definir cómo se deben mostrar los
+                                                  <br>elementos en una página web, incluyendo aspectos
+                                                  <br>como el diseño, colores, fuentes y márgenes. 
+         <br>
+         <b style="font-size: 24px;">Basicamente define el DISEÑO de una página web</b>
+      </p>
+      <div class="div-pagina-web-sin-css">
+        <p>
+          <b style="font-size: 30px; font-family: Avenir Black;">- ESTA PAGINA WEB SIN CSS -</b> <br>
+          <section class="section-pagina-web-con_sin-css">
+              <img class="img-pagina-web-con_sin-css" src="Imagenes/ENSEPROG-SIN-CSS2.webp">
+              <img class="img-pagina-web-con_sin-css" src="Imagenes/ENSEPROG-CON-CSS2.webp">
+          </section>
+          <img class="img-ANTES" src="Imagenes/ANTES2.webp">
+          <img class="img-DESPUÉS" src="Imagenes/DESPUÉS2.webp">
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+  <footer class="footer">
+    <div class="footer-div1">
+      <div class="footer-div-row">
+        
+        <div class="footer-div-links">
+          <h4>Compañia</h4>
+          <ul>
+            <li><a href="HISTORIA.html">Nosotros</a></li>
+            <li><a href="HISTORIA.html">Nuestra historia</a></li>
+            <li><a href="Politica-de-privacidad.html">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="">Preguntas</a></li>
+            <li><a href="https://www.instagram.com/thiagoml43">Contactanos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="HTML.html">HTML</a></li>
+            <li><a href="CSS.html">CSS</a></li>
+            <li><a href="Atajos.html">ATAJOS</a></li>
+            <li><a href="PYTHON.html">PYTHON</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Síguenos</h4>
+          <div class="footer-social-link">
+            <a href="https://www.facebook.com/" TARGET="_BLANK"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thiagoml43" TARGET="_BLANK"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=es" TARGET="_BLANK"><i class="fab fa-twitter"></i></a>
+            <a href="https://ar.linkedin.com/" TARGET="_BLANK"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

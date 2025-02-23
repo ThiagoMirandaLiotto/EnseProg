@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo lo de CSS | Enseprog</title>
+	<link rel="icon" href="Imagenes/IconoESEPRO.webp">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style-css.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<script src="https://kit.fontawesome.com/83480b7348.js" crossorigin="anonymous"></script>
+</head>
+<body class="hidden">
+	<section class="section-loader" id="onload">
+	<!-- 
+	<div class="lavarropas">
+  
+	</div>
+	-->
+	<div class="spinner">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+  </section>
+	<header class="header">
+		<div class="container">
+			<div class="navbar">
+				<a href="Index.html"><img class="logo" src="Imagenes/logoESEPRO.webp" alt="logo"></a>
+				<ul class="ul-inicio">
+					<li><a href="index.html">INICIO</a></li>
+					<li><a href="HTML.html">HTML</a></li>
+					<li><a href="CSS.html">CSS</a></li>
+					<li><a href="PYTHON.html">PYTHON</a></li>
+				  </ul>
+				  <a onclick="openNav()" class="menu" href="#"><i class="fa-solid fa-bars"></i></a>
+
+				  <div class="overlay" id="mobile-menu">
+					  <a href="" onclick="closeNav()" class="close">&times;</a>
+					  <div class="overlay-content">
+						  <a href="index.html">INICIO</a>
+						  <a href="HTML.html">HTML</a>
+						  <a href="CSS.html">CSS</a>
+						  <a href="PYTHON.html">PYTHON</a>
+					  </div>
+				  </div>
+			</div>
+		</div>
+
+	</header>
+
+
+
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+		var header = document.querySelector("header");
+		header.classList.toggle("abajo",window.scrollY>0);
+	})
+	function smoothScrollTo(targetElementId) {
+  const targetElement = document.getElementById("div-genrral");
+
+  if (targetElement) {
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    // Función de animación
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      let progress = timeElapsed / 1000; // Duración de la animación: 500ms
+      if (progress > 1) progress = 1;
+      
+      const newPosition = startPosition + (distance * easeInOutQuad(progress));
+      window.scrollTo(0, newPosition);
+      
+      if (progress < 1) requestAnimationFrame(animation);
+    };
+
+    // Función de easing
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + ((4 - (2 * t)) * t);
+    }
+
+    // Inicia la animación
+    requestAnimationFrame(animation);
+  }
+}
+	window.onload = function(){
+		$('#onload'). fadeOut();
+		$('body'). removeClass('hidden');
+}
+
+	function openNav(){
+		document.getElementById("mobile-menu").style.width = "100%";
+	}
+	function closeNav(){
+		document.getElementById("mobile-menu").style.width = "0%";
+	}
+</script>
+
+<main class="hero-image">
+    <div class="div-1" data-bs-theme="dark">
+        <div class="div-1-1">
+			<a href="#div-genrral" onclick="smoothScrollTo('#div-genrral')">
+					<i class="fa-solid fa-arrow-down i"></i>
+				</div>
+			</a>
+        </div>
+    </div>
+</main>
+<main id="div-genrral" class="section-inicio">
+	<div class="conteiner-inicio">
+	  <h1 class="h1-inicio">Todo lo que aprendí de CSS</h1>
+	  <p>Aca voy a escribir todo lo que voy aprendiendo de CSS.<br> Luego de escribir mucho de "TODO LO DE HTML", me cansé y luego de 2 años restomé el curso de programación, y ahora tengo 15 años.</p>
+	  <p>Si ya sabes algo de programación esta página la puedes usar cuando no recuerdes como hacer algo.</p>
+	</div>
+</main>
+	<span>(idea para cuando edite esto en css: Hacer que los ejemplo esten en una seccion aparte. Tipo al lado pero tengas q tocar para ir a ellos y les direccione a otra pestaña, esto tiene que estar bien representado para que lo entiendan tipo con imagenes, capturas, capaz videos y todo)(otra idea q se me ocurrio es hacer lo mismo q el ejemplo pero con palabras distintas, tipo si no entendió algo explicarlo diferente) </span>
+<section class="">	
+  <h1 class="p-titulo-horizontal">TODO LO QUE APRENDÍ DE CSS</h1>
+	<div class="div-texto-horizontal">
+		<div class="estructura">
+			<p>
+		 		<h2>ESTRUCTURA:</h2>
+			<br>	<b>
+				selector {
+					propiedad: valor;
+				}
+			<br></b>
+			siempre termina con ;
+			<br>
+			</p>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h2> <i class="H2-selector fa-solid fa-arrow-pointer"></i> SELECTOR:</h2>
+			<br>
+			Universal; como dice la palabra, es para seleccionar todo. Y se usa *<br>
+			<br>
+			De tipo; es para seleccionar por separado un grupo, por ej: H1 <br>
+			<br>
+			<b>Clases</b>; es el que mas se usa y es para cambiar el nombre a un grupo, se pone class="el nombre que queres" en el elemento que queres cambiar, y se usa con <b>.el nombre que pusiste</b>. <br>
+			<br>
+			Id; es casi lo mismo que Clases, se pone id="el nombre que queres" en el elemento que queres cambiar, y se usa con <b id="elemnt-1">#el nombre que pusiste</b>. <br>
+			<br>
+			Por atributo; es casi lo mismo que los otros 2 anteriores, se pone [elnombrequequieras="otronombrequequieras"] en el elemento que queres cambiar, y se usa con lo mismo. <br>
+			<br>
+			<span>Descendiente; es como mas específico, no se pone nada, y se usa por ej: [] = <>     [h2][p] mi primer h2 con ccs [p][h2] en este caso se usa con <b>h2 p</b> { color: red }</span><br>
+			<span>Pseudo-clases; es como "de tipo" pero cuando pasas el mouse por encima se pone de color, no se pone nada, y se usa con el elementoquequeres:hover</span><br>
+			El mejor Selector para usar en toda la página es class ya que si lo usas en todos estarias creando un novel universal del mismo valor por asi decirlo. <br>
+			Para abreviar y ahorrar espacio cuando queremos las mismas propiedades para dos selectores distintos, puedes poner: selector, selector{ propiedad: valor;}
+		</p>
+	</div>
+</section>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h3><i class="fa-sharp fa-solid fa-circle-exclamation"></i> ESPECIFIDAD</h3>
+			La especifidad es el nivel de poder que tiene cada selector:<br>
+			<img src="Imagenes/Especifidad.webp" alt="especifidad"><br>
+			El ESTILO EN LINEA se pone style="color:red" en el elemento que necesites y no se usa nada.<br>
+			EL !IMPORTANT se usa a la derecha del color que pusiste, por ej: h1 {color: blue !important}
+		</p>	
+	</div>
+</section>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h3> <i class="h3-unidades fa-solid fa-ruler"></i> UNIDADES</h3> <br>
+			Las unidades se ponen en el VALOR. <br>
+			Px (pixeles), cm (centimetros), mm (milimetros), etc. <br>
+			Pero tambien hay medidas relativas, las cuales se adaptan a mobile (celular o tablet): <br>
+			Em= 16px <br>
+			Vw: es el porcentaje de la pantalla, por ej: 50vw (width) es el 50 porciento de la pantalla de largo. <br>
+			Vw: es el porcentaje de la pantalla, por ej: 50vh (height) es el 50 porciento de la pantalla de alto. <br>
+		</p>
+	</div>
+</section>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h2>  PROPIEDADES DE LA TIPOGRAFÍA (letra)</h2>
+			<span class="contact-form__font-size"><b>Font-size</b>: el tamaño de la letra</span>  <br>
+			<span class="contact-form__font-family"><b>Font-family</b>: la fuente de la letra, osea el estilo de la tipografía. </span> <br>
+			<span class="contact-form__line-height"><b>Line-height</b>: es el tamaño del espacio invisible de arriba y de abajo de la letra.	 </span> <br>
+			<span class="contact-form__font-weight"><b>Font-weight</b>: es el grosor de la letra</span> <br>
+		</p>
+	</div>
+</section>
+<section>
+	<br> 
+	<br>
+	<div class="div-texto-horizontal">
+		<div>
+		<p>
+			<h2 class=""> <i class="fa-solid fa-display"></i> DISPLAY</h2>
+			Hay elementos en linea y elementos en bloques, estos últimos ocupan todo el largo de la pantalla (h1,h2,h3,h4,p,form,etc). En cambio los elementos en linea solo ocupan su espacio, osea mucho menos (b,span). Esto se puede cambiar con las prodiedad display:   <br>
+			<b>Display:inline</b>: es en linea, puede modificar los elementos de bloque a en linea. <br>
+			<b>Display:block</b>: es en bloque, puede modificar los elementos de linea a bloque. <br>
+			La ventaja que tiene los elementos en bloque es que pueden usarse por ej; width y height, en cambio los elementos en linea no. <br>
+			<b>Display:inline-block</b>: sirve para fucionar block e inline, ya que cuando ponemos una caja como "display:inline" esta no le importará el Height y wigth, lo cual se convertiría su tamaño a el del contenido. Para que no pase eso se usa display:inline-block, (las cajas se pondran una al lado de la otra con su respectivo width y height). <br>
+		</div>
+	<div>
+			<h3>FLEX BOX</h3>
+			Luego se creó Flex que remplazó estas 3 anteriores; es una propiedad de caja que tiene muchas funciones que te facilitan mucho mas el código: <br>
+			<b>Display: Flex</b>: si pondrias dos cajas con texto con la propiedad "display block" esta se pondria una abajo de la otra, pero con display felx se podrian una al lado de la otra. La diferencia de inlineblock es que desbloquea nuevas propiedades y tienen la misma altura las dos cajas, sin importar que una tenga mas contenido que otra, osea se adaptan dependiendo el contenido: <a href="Imagenes/Display-flex.webp" target="_blank">ejemplo</a>, excepto que le pongamos una altura y un ancho especifico, en este caso se pondrian tambien una al lado de la otra pero con esas propiedades de altura/ancho. Display flex desbloquea estas nuevas propiedades:<br>
+			<ul>
+				<li><b>flex-direction</b>: estes es la direccion en el que van a ir las cajas, row (horizontales) osea una al lado de la otra, o column (columna) una abajo de la otra.</li>
+				<li><b>flex-wrap: wrap</b>: las cajas flex son flexibles por asi decirlo, se adaptan a la medida de la pantalla, pero si no queremos que sean flexible osea que se plasten, que tampoco cambien sus propiedades cada ves que se achica el tamaño de la pantalla, se usa flex-wrap; hace que en ves de que se aplastasten (las cajas) al cambiar de pantalla, vayan al reglon de abajo, osea las manda para abajo pero con las mismas propiedades, sin cambiar su tamaño.</li>
+				<li><b>flex-wrap: nowrap</b>: lo mismo que wrap pero con la diferencia de que cuando se achica la pantalla las cajas no las manda al reglon siguiente, sino que las desaparecen.</li>
+				<li><b>flex-wrap: reverse</b>: lo mismo que wrap nomas que invertido todo. </li>
+				<li><b>justify-content</b>: es para aplicarle diferentes margin a todas las cajas en forma horizontal (sobre el <a href="https://www.shutterstock.com/es/image-vector/xaxis-yaxis-black-on-white-background-1812714550" target="_blank">eje x</a>), con "center" centras todo el contenido (todas las cajas) en el centro, con "space-around" centras las cajas como margin auto (es lo mismo), osea le pone el mismo margin a todas las cajas, con "space-between" les dá un margin para que todas las cajas esten lo mas separadas posibles, y "space-evenly" les dá un margin para que todas las cajas tengan el mismo espacio entre cada caja, porque no es lo mismo que todas las cajas tengan el mismo espacio entre si que el mismo margin. </li>
+				<li><b>align-items</b>: posicionas las cajas de diferentes formas sobre el eje y, de forma vertical por asi decirlo, con "center" centras las cajas sobre el <a href="https://www.shutterstock.com/es/image-vector/xaxis-yaxis-black-on-white-background-1812714550" target="_blank">eje y</a> (no es lo mismo que de forma vertical), osea centras las cajas en el centro del eje y, con "flex-start" manda todas las cajas al principio del eje y y con "flex-end" al final, con </li>
+				<li><b>align-content</b>: lo mismo que aligns-items, nomas que cuando la pantalla cambia de resolución las cajas se va agrupando organizadamente, en cambio con align-items no. Esto necesita de "flex-wrap: wrap".</li>
+				<li><b>flex-grow</b>: administra las cajas para que ocupen toda la pantalla, osea que si ponemos 3 cajas una al lado de la otra y le ponemos "flex-grow: 1", cada ves que se agrande o se achique la pantalla se cambiará el tamaño de las cajas, ocupando siempre toda la pantalla, esto pasa si le ponemos "1" a todas las cajas, pero si le ponemos "flex-grow=1" a una caja, esta ocupará la mayor parte posible del ancho de la pantalla. Esto tambien se puede combinar con "min-width", que es el mínimo de ancho que puede tener una caja.</li>
+				<li><b>flex-basis</b>: es lo mismo que un "width" pero es mejor para usar con flex, tiene mas poder.</li>
+				<li><b>order: el orden en el que se posicionan las cajas flex, por ejemplo: si una caja le pones "order:1" esta se posicionará primera que las demas. Y si le pondríamos order:2 y haya otras caja, se pondría segunda.</b></li>
+			</ul>
+		</p>
+	</div>
+		<div>
+			<p>
+				<h2>GRID</h2>
+			</p>
+		</div>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+ 			<h2 class=""> <i class="fa-solid fa-box-archive"></i>PROPIEDADES DE CAJAS</h2>
+			Las propiedades mas importantes de una caja son line.height, padding, border y margin.
+			<b>Height y Width</b>: el alto y ancho de la caja. <br>
+			<b>Padding</b>: este es el espacio que hay entre la letra y la caja, se puede poner padding (solo), padding-top, padding-right, padding-left y padding-bottom, este van acompañadas de una unidad. En esta imagen esta mas claro: <br>
+			<img class="img-horizontal" src="Imagenes/padding.webp" alt="padding">
+			<b>Border</b>: es el borde, se pone border: medida estilo color. Por ejemplo: border: 10px solid blue. Hay muchos estilos, entre ellos estan: Solid (solido), dashed (rayas), double (dos lineas fina de borde), groove, inset, outset, ridge, etc. El mas usado es Solid. <br>
+			<b>Border-radius</b>: es el borde redondeado de una caja. <br>
+			<b>Outline</b>: lo mismo que border pero no ocupa un ligar real por asi decirlo. <br>
+			<b>Margin</b>: es la distancia entre las cajas. Tambien existe left, right, bottom y top. Con margin:auto se centra la caja. <br>
+			<b>Box-sizing: border-box</b>: este hace que se respete la regla del height y width, y no del padding ni del border. <br>
+			<b>Box-sizing: content-box</b>: hace que lo que dice el height y el width es lo que medirá la caja sin el border, pero si le aplicamos un border, la caja medirá más. Por ej: le ponemos un height y width de 100px, la caja medirá 100x100px, pero si le metemos un border de 10px, tambien la caja medirá 100x100px, pero si le ponemos un box-sizing:content-box esta medirá 110x110px.
+			<b>Box-shadow</b>: Es la sombra, se usa box-shadow: ejex ejey tamañodeldesenfoque borde color. Por ejemplo: box-shadow: 2px 5px 10px 0 red <br>
+			<b>text-shadow</b>: Lo mismo que box-shadow exepto el borde. <br>
+			<h3>POSITION:</h3> <br>
+			<b>Position:relative</b>: desbloquea 4 propiedades nuevas; top, left, bottom, right y z-index. Estas menos la última son para mover la caja. Y tambien conserva su espasio anterior, osea que cuando le ponemos a una caja top:30px esta se moverá hacia abajo 30px pero reservará su posicion anterior. Top y left tienen la prieridad, son como las que ma valor tienen.<br>
+			<b>Z-index</b>: este se desbloquea por el position-relative, lo que hace es aplicarle un valor a una caja, la caja que tenga mas valor estará por encima de las de mes valor. Por ejemplo si una caja llamada caja1 le pones 20 de valor de z-index, y a otra le pones 19, la caja1 estará y se verá por encima de la otra. <br>
+			<b>Position:absolute</b>: es lo mismo que relative exepto que no reserva su lugar o espacio anterior. Por ej: si hay una caja arriba de otra, y la caja de arriba le pones un position-absolute y left 30px, esto lo que hará es mover la caja que estaba abajo a arriba (ya que no reserva ningun lugar) y mover la caja que estaba arriba a la derecha 30px. Si queres que una caja dentro de otra caja grande se mueva al extremo inferior izquierdo de la caja grande, le pones bottom:0, si la quieres al extremo derecho de la caja grande right:0 y asi con las demas, pero si la quieres en el extremo inferior derecho como su posicion por defecto va a ser en el extremo superior izquierdo de la caja le tienes que poner bottom:0 y right:0. Y si la quieres centrar tienes que poner top:0, right:0, left:0, bottom:0 y margin:auto.<br>
+			<b>Position:fixed</b>: hace que cuando mueves el scroll osea la ruedita del mouse, el texto o caja que tenemos establecido con fixed se fija en un mismo lugar siempre. Y no ucupa espacio en la pantalla, osea que no reserva su espacio anterior ni el actual. <br>
+			<b>Position:sticky</b>: es una fucion entre position-relative y fixed. Ya que hace la misma funcion que fixed y la misma que position relative, es decir que tiene top,bottom, etc y ocupa un espacio. La unica diferencia es que cuando el scroll pasa donde se sitúa empieza a comportarse como un fixed. <br> <br>
+			<b>Overflow</b>: esto sirve cuando el contenido sobrepasa su respectiva caja, hay "overflow:auto" detecta cuando sobre pasa el texto de la caja y pone un scroll, tambien está "overflow:scroll" esto pone un scroll aunque no sobrepase el texto de la caja. En una imagen no se puede salir de su respectiva caja, exepto que le pongas position relative, con esto se puede crear un efecto visual muy bueno; con "position:relative" (mueve a la imagen de su caja, con top,left,etc) y "overflow:hidden" (hace que esta imagen se vea por debajo de la pagina cuando no esta en su respectiva caja, es decir se hace invisible). <br>
+			<b>Float</b>: es parecido a inline-block, se usa cuando queremos hacer lo mismo que en inline-block pero con un titulo(h1), esto quedo en la vieja escuela y no vale la pena usarlo, ya que tendremos un monton de errores con esto. Ahora se usa más Flex y Grid. Un uso muy útil que le podemos dar al float es poniendo "float:left" o right en una imagen dentro de una caja con texto y asi crearíamos este efecto <img class="img-horizontal" src="Imagenes/EjemploFLOAT.webp" alt="EjemploFLOAT">esto es cuando queres que poner una imagen dentro de un contenedor (caja) que tiene texto, esto lo que haria es poner la imagen dentro del contenedor apartando al texto que estaba alli a un lado. <br>
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p class="pseudoelementos">
+			<h2>PSEUDOELEMENTOS</h2>
+			Los pseudoelementos se ponen luego del selector (osea que se aplica a un elemento), así: "selector::pseudoelemento". Estos no funcionan en inlane.<br>
+			<b>::first-line</b>: selecciona la primera linea del respectivo elemento (selector). Osea se puede editar el estilo del primer reglon de la pantalla con first-line. <br>
+			<b>::first-letter</b>: <span class="pseudoelemento-first-letter">lo mismo que line pero con la primera letra. </span><br>
+			<b>::placeholder</b>: Este es para editar el placeholder, para cambiarle su estilo.  <br>
+			<b>::selection</b>: cuando pintamos con el cursor algo escrito en el form, se pinta el fondo de azul y las letras blancas, esto se puede editar con "selection". Por ejemplo: <form><input type="text" class="input-selection"></form> <br>
+			<b>::before</b>: esto escribe y edita textos antes de un elemento, es decir si tu tienes un elemento ya sea un texto que dice "hola", before en este caso escribirá lo que le digas antes que el "hola". Debajo del "::before" osea en la propiedad, "se escribe content:lo-q-quieras-q-aparezca-antes-del-elemento". El before no tiene una hitbox por asi decirlo, no se le puede pintar con el cursor, ya que no llega a ser un elemento, por eso es un pseudo-elemento. <br>
+			<b>::after</b>: lo mismo que "before" pero despues del texto. 
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p class="pseudoclases">
+			<h2>PSEUDOCLASES</h2>
+			Las pseudoclases se ponen luego del selector, y con un dos puntos, así: "selector:pseudoclase".  <br>
+			<b>:hover</b>: edita el estilo de un hover, un hover funciona cuando pasamos el cursor por encima de un elemento que tiene hover cambiará el estilo. Lo mas recomendable es usarlo con el elemento transition y cambiandole de medida (height y width) al hover.
+			<b>:link</b>: edita los elementos de links que no estan visitados, osea si un link no esta clickeado adquiere este estilo. Si no existe el link no cuenta. <br>
+			<b>:visited</b>: lo contrario que ":link", cambia los estilos ya visitados. <br>
+			<b>:active</b>: si se mantiene apretado el click del cursor en un elemento "active", cambiará de estilo. <br>
+			<b>:focus</b>: si un elemento esta seleccionado osea clickeandolo, cambia su estilo (focus). Esto se usa mas que nada con input, form. <br>
+			<b>:lang</b>: casi ni se usa, modifica el estilo de un elemento que está en el idioma que le dices , por ejemplo: español, entonces todos los elementos que están en español adquirirán el estilo puesto.
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h2>IMG</h2>
+			<h3> <i class="fa-regular fa-image"></i> OBJECTS FIT</h3>
+			Los objets-fit es una propiedad que ajusta la imagen a su caja, de diferentes formas: <br>
+			Por defecto cuando queres poner una imagen dentro de una caja que es de diferente medida la imagen se estirará hasta quedar de la misma medida que la caja, esto queda muy feo, por eso es que existen los objets-fit: <br>
+			<b>"object-fit: contain"</b>: la img (imagen) se ajusta al tamaño de la caja pero con su forma, lo cual si la caja tiene un tamaño rectangular y la imagen es cuadrada, va a sobrar espacio. <br>
+			<b>"objets-fit: cover"</b>: la img se ajusta a la caja sin dejar espacio, osea si la caja es rectangular y la img es cuadrada, "cover" recortará la img para que quede rectangular. <br>
+			<b>"objets-fit: none"</b>: aplica siempre el tamaño real de la img sin importar el tamaño de la caja. Si la img es de 300x300px y la caja de 400x400px la img se quedará en 300x300px. Este no conviene usarlo. <br>
+			<b>"object-fit: scale-down"</b>: agarra la resolución que mas le conviene entre "contain" y "none", y aplica la que menos espacio en blanco queda. <br>
+			<b>"object-position"</b>: existe top, bottom, left, right y medidas. Sirven para posicionar a la imagen con la propiedad "cover" dentro de la caja, por ejemplo: cuando la caja es cuadrada y la imagen rectangular con la propiedad "cover", la imagen estará recortada arriba y abajo para que no haya espacios en blanco, pero si uno quiere que se vea la parte de arriba de la imagen se pone "object-position:top", así se vería mas la parte de arriba y menos la parte de abajo de la imagen. <br>
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h4><i class="fa-sharp fa-solid fa-arrow-pointer"></i> Cursor</h4>
+			<b>Cursor</b>: con la propiedad cursor puedes editar el estilo del cursor cuando esta encima de la caja que vamos a ponerle la propiedad (cursor), en esta pagina estan todos los tipos de cursores: <a href="https://www.w3schools.com/cssref/tryit.asp?filename=trycss_cursor" target="_blank">TiposDeCursores</a> <br>
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h3><i class="fa-solid fa-brush"></i> Colores</h3>
+			Hay varias maneras de llamar a los colores, estas dos son las mejores y las que mas se usan: <br>
+			<b>Hexadecimal</b>: se usa con "#", por ejemplo: "color: #e12f". Pagina donde buscar colores hexadecimal: <a href="https://html-color-codes.info/codigos-de-colores-hexadecimales/" target="_blank">COLORES-HEXADECIMAL</a>, tambien hay una pagina muy util para detectar el colore de una imagen: <a href="https://imagecolorpicker.com/#" target="_blank">DETECTA-COLORES</a> <br>
+			<b><span class="r" style="color: red;">R</span><span class="g" style="color: green;">g</span><span class="b" style="color: blue;">b</span></b>: se usa con "rgb (n,n,n)", por ejemplo: "rgb (255,255,0)". Página donde buscar colores rgb: <a href="https://www.rapidtables.org/web/color/RGB_Color.html" target="_blank">COLORES-RGB</a>, tambien hay una pagina muy util para detectar el colore de una imagen: <a href="https://imagecolorpicker.com/#" target="_blank">DETECTA-COLORES</a> <br>
+			<b>Rgba</b>: lo mismo que rgb, nomas agrega un nuevo numero que es la opacidad del color (es como lka función opacity), por ejemplo: "background: rgba (213,654,153,.5)", se pone .yelnumeroquequieraslaopacidad (menor el numero mas opacidad). <br>
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h3>MENU RESPONSIVE</h3>
+			Un menu responsive es un menu para resoluciones mas pequeñas que las de un escritorio, como las del celular. <br>
+			Para hacer esto se pone en css "<b> @media only sreen and (max-width: 500px) { el menu responsive }</b>". Aca estamos diciendole que si la pantalla pasa a una resolución menor que 500px de ancho pasa los estolos que le digamos. <br>
+			La diferencia de un menu de escritorio y uno de celular es que este ultimo tiene resoluciones mas pequeñas lo cual no entran todo lo del escritorio, por esto es que se usa un botom que usualmente tiene tres rayas "<i class="fa-solid fa-bars"></i>", este se usa para cuando lo toquen salga el menu desplazado. <br>
+			<b>¿Como hacer que cuando toques <i class="fa-solid fa-bars"></i> se desplace el menu?</b> <br>
+			Tienes que poner en el menú, un position-relative que tenga mucho top como para que no esté en la pantalla, luego pones ".laclaseqlepusistealMENURESPONSIVE:hover > .laclaseqlepusistealoqquieresqsedesplaceoseaelDIVDONDEESTALOSLINKS {
+				top: 0;
+				transition: 0.5s;
+			}" <br>
+			Esto lo que hace es que si el usuario toca el menú, que es donde va a estar el <i class="fa-solid fa-bars"></i>, lo que pondras en los parentesis {} es lo que hará la clase que pusiste detras del ">" osea el div donde está los href. <br>
+		</p>
+	</div>
+</section>
+<section>
+	<div class="div-texto-horizontal">
+		<p>
+			<h2>RESPONSIVE DESIGN</h2>
+			@media: es lo mas importante todos si queres un menú responsive (mobile y otras resoluciones). <br>
+			@media es como un Si pasa esto... hace esto (una acción), es un SI, es la clave para todo responsive, ya que si quieres hacer una web aplicada a mobile la necesitaras. <br>
+			Lo que más se usa es <b>@media screen and (la condición q qres) {<br>
+			.las clases q qres modificar{ <br>
+				y la acción o el estilo q qres cambiar <br>
+				<br>
+		} <br></b>
+			Por ejemplo: <b><span style="color:red">@media</span> <span style="color:green">screen</span> and (</span><span style="color:blue">max-width: 600px</span>) { <br>
+			<span style="color:blueviolet">.div-inicio</span>{ <br>
+			<span style="color:rgb(22, 66, 52)">background-color: red</span><br>
+			} <br>
+			} <br></b>
+			Aquí estamos diciendole que <span style="color:red">SI</span> <span style="color:green">la screen</span> pasa <span style="color:blue">los 600px como máximo</span> hará que <span style="color:blueviolet">.div-inicio</span> <span style="color:rgb(22, 66, 52)">cambiara su fondo a rojo</span>. <br><br>
+
+			Tambien existe la función AND y OR que se usan al lado de (la condicion). <br>
+			<b>OR</b> se usa asi: "(la condicion) OR (otra condicion)", esto esta diciendo que para que pase la accion (que no esta puesta en este ejemplo) se necesita que se haga una de las 2 acciones. <br>
+			y <b>AND</b> se usa:  "(la condicion) AND (otra condicion)", aqui se tiene que cumplir las 2 condiones para que pase la acción.
+		
+		</p>
+	</div>
+</section>
+	<br> 
+	<br>
+	<div>
+		<p>
+			
+		</p>
+	</div>
+	<footer class="footer">
+		<div class="footer-div1">
+		  <div class="footer-div-row">
+			
+			<div class="footer-div-links">
+			  <h4>Compañia</h4>
+			  <ul>
+				<li><a href="HISTORIA.html">Nosotros</a></li>
+				<li><a href="HISTORIA.html">Nuestra historia</a></li>
+				<li><a href="Politica-de-privacidad.html">Política de privacidad</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Ayuda</h4>
+			  <ul>
+				<li><a href="">Preguntas</a></li>
+				<li><a href="https://www.instagram.com/thiagoml43">Contactanos</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Servicios</h4>
+			  <ul>
+				<li><a href="HTML.html">HTML</a></li>
+				<li><a href="CSS.html">CSS</a></li>
+				<li><a href="Atajos.html">ATAJOS</a></li>
+				<li><a href="PYTHON.html">PYTHON</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Síguenos</h4>
+			  <div class="footer-social-link">
+				<a href="https://www.facebook.com/" TARGET="_BLANK"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/thiagoml43" TARGET="_BLANK"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/?lang=es" TARGET="_BLANK"><i class="fab fa-twitter"></i></a>
+				<a href="https://ar.linkedin.com/" TARGET="_BLANK"><i class="fab fa-linkedin"></i></a>
+			  </div>
+			</div>
+	
+		  </div>
+		</div>
+	  </footer>
+	  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+</html>

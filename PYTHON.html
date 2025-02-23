@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Todo lo de PYTHON | Enseprog</title>
+        <link rel="icon" href="Imagenes/IconoESEPRO.webp">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style-python.css">
+        <link rel="stylesheet" type="text/css" href="normalize.css">
+        <script src="https://kit.fontawesome.com/83480b7348.js" crossorigin="anonymous"></script>
+    </head>
+<body class="hidden">
+        <section class="section-loader" id="onload">
+        <!-- 
+        <div class="lavarropas">
+      
+        </div>
+        -->
+        <div class="spinner">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+    <header class="header">
+		<div class="container">
+			<div class="navbar">
+				<a href="Index.html"><img class="logo" src="Imagenes/logoESEPROpython2.0.webp" alt="logo"></a>
+                <ul class="ul-inicio">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="PYTHON.html">PYTHON</a></li>
+                </ul>
+			</div>
+		</div>
+	</header>
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+		var header = document.querySelector("header");
+		header.classList.toggle("abajo",window.scrollY>0);
+	})
+	function smoothScrollTo(targetElementId) {
+  const targetElement = document.getElementById("div-genrral");
+
+  if (targetElement) {
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    // Función de animación
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      let progress = timeElapsed / 1000; // Duración de la animación: 500ms
+      if (progress > 1) progress = 1;
+      
+      const newPosition = startPosition + (distance * easeInOutQuad(progress));
+      window.scrollTo(0, newPosition);
+      
+      if (progress < 1) requestAnimationFrame(animation);
+    };
+
+    // Función de easing
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + ((4 - (2 * t)) * t);
+    }
+
+    // Inicia la animación
+    requestAnimationFrame(animation);
+  }
+}
+window.onload = function(){
+    $('#onload'). fadeOut();
+    $('body'). removeClass('hidden');
+  }
+</script>
+<main class="hero-image">
+    <div class="div-1" data-bs-theme="dark">
+        <div class="div-1-1">
+			<a href="#div-genrral" onclick="smoothScrollTo('#div-genrral')">
+					<i class="fa-solid fa-arrow-down i"></i>
+				</div>
+			</a>
+        </div>
+    </div>
+</main>
+<main id="div-genrral" class="section-inicio">
+	<div class="conteiner-inicio">
+	  <h1>Todo lo de PYTHON</h1>
+	  <p>Aca voy a escribir todo lo que voy a ir aprendiendo de PYTHON.<br></p>
+	  <p>Si ya sabes algo de programación esta página la puedes usar cuando no recuerdes como hacer algo.</p>
+	</div>
+</main>
+<section>
+    <div>
+        <h1>Instalacioón de PYTHON</h1>
+        <ul>
+            <li>1. Busca el sitio web oficial de python y descarga la version más reciente: <a target="_blank" rel="noopener noreferrer" href="https://www.python.org/">click aqui</a></li>
+            <li>2. Ejecuta el instalador.</li>
+            <li>3. Instala Python.</li>
+            <li>4. En Visual Estudio instala una extension llamada PYTHON y Python ident</li>
+        </ul>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Tipo de datos</h1>
+        <p>
+            Los tipos de dato en python son: <br> <br>
+        </p>
+        <ul>
+            <li style="color: rgb(0, 0, 0);">-String (cadena de textos). Ejemplo: <code>"Hola"</code>.</li>
+            <li style="color: rgb(185, 1, 1);">-Int    (números enteros).  Ejemplo: <code>123</code></li>    
+            <li style="color: rgb(0, 0, 172);">-Float  (números con coma). Ejemplo: <code>12.3</code></li>
+            <li style="color: rgb(134, 134, 0);">-Bool   (si algo es verdadero o falso). Ejemplo: <code>True/False</code></li>
+        </ul>
+        <p>
+            Estos datos los puedes convertir en otro tipo de dato, por ejemplo: <br>
+        <code>
+            numero = "123" <span class="anotador-de-codigo">#Esto aunque no lo creas es un <b style="color: rgb(0, 0, 0);">String</b> porque tiene parentesis, entonces funciona como cadena de texto</span><br>
+            int(numero)  <span class="anotador-de-codigo">#Esto lo convierte a int (número entero)</span>
+        </code>
+        </p>
+    </div>
+</section> 
+<section>
+    <div>
+        <h1>Variables</h1>
+        <p>
+            En una variable almacenamos datos para poderlos utilizar posteriormente. Dos ejemplos de como definir una variable: <br>
+            <code><li><span class="anotador-de-codigo">#Definiendo una variable con camelCase:</span> <br>
+                nombreCompletoDeTuTioAbuelo = "Fernando Alonso"</li>
+            <li><span class="anotador-de-codigo">#Definiendo una variable con snake_case:</span> <br>
+                nombre_completo_de_tu_tio_abuelo = "Fernando Alonso"</li></code>
+        </p>
+    </div>
+</section>
+<section>
+    <div class="li-general">
+        
+        </p>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Datos compuestos</h1>
+        <ul>
+            <li class="li-general"><h3>Lista</h3>
+                <p>            
+                    Define los elementos como si estuvieran en listados: <br>
+                    <code><b>lista = ["Thiago", "Armario", True, 1.85]<br>
+                    print(lista[0])<br></b> </code>
+                    En este ejemplo estamos diciendo que queremos que nos muestre el elemento "0" de la lista, es decir "Thiago". "Armario" sería el elemento "1", True es el elemento "2" y 1.85 es el elemento "3".
+                </p>
+            </li>
+            <li class="li-general"><h3>Tupla</h3>
+                <p>
+                    Tiene las mismas propiedades que una lista pero no se puede modificar su contenido mas adelante, y se usan "()" en ves de "[]". <br>
+                    Por ejemplo: <br>
+                    <code>
+                        <b>tupla = ("Thiago", "Armario", True, 1.85)<br>
+                            tupla [1]= "frizzer" <span class="anotador-de-codigo">#<--------Esto no es válido porque las tuplas no se pueden modificar mas adelante.</span><br>
+                            print(tupla[1])</b> <span class="anotador-de-codigo">#Mostrará error por lo de "frizzer", pero si sacáramos ese reglón mostraría Armario (ya que estamos llamando a la posicion 1 de la tupla).</span>
+                    </code> <br>
+                    Tambien se puede crear una tupla sin los paréntesis: <br>
+                    <code>
+                         tupla = "Thiago", "Armario", True, 1.85 <br>
+                         print(tupla) <span class="anotador-de-codigo">#Mostrará la tupla completa</span> <br>
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Conjunto</h3>
+                <p>
+                    Tiene las mismas propiedades que una tupla pero no se puede mostrar un elemento solo, se tienen que mostrar todos, y se usan "{}" en ves de "()", y tampoco se pueden escribir elementos duplicados. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        <b>conjunto = {"Thiago", "Armario", True, 1.85}<br>
+                            print(conjunto[1]) <span class="anotador-de-codigo">#<--------Esto NO es válido</span><br>
+                            print(conjunto)    <span class="anotador-de-codigo">#<--------Esto SI es válido</span></b> <br>
+                    </code>
+                        En este ejemplo la consola nos mostrará- {"Thiago", "Armario", True, 1.85} -ya que "conjunto" hace que te muestre todos los elementos, no uno solo. <br>
+                        Tambien existen los subconjuntos, que es un conjunto de valores que ya existen en otro conjunto. <br>
+                        Por ejemplo: <br>
+                        <code>
+                            conjunto1 = {"Thiago", "Miranda", True, 1.85} <br>
+                            nombre_completo = {"Thiago", "Miranda"} <span class="anotador_de_codigo">#<--------Esto es un subconjunto del "conjunto1"</span> <br>
+                            verificador = nombre_completo.issubset(conjunto1) <span class="znotador_de_codigo">#Acá le estamos preguntando si es un subconjunto de "conjunto1"</span> <br>
+                            print(verificador) <span class="anotador_de_codigo">#Mostrará True, porque "nombre_completo" SI es un subconjunto de "conjunto1".</span> <br>
+                        </code>
+                        También se puede verificar con un "<=": <br>
+                    <code>
+                        verificador = nombre_completo <= conjunto1 <span class="anotador_de_codigo">#Devuelve un booleano (True o False).</span> 
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Diccionario</h3>
+                <p>
+                    Tiene las mismas propiedades que una lista pero en ves de nombrarlos por los numeros "0,1,2,3,4...", se les nombra por el nombre que quieras y se usan "{}".<br>
+                    Por ejemplo: <br>
+                    <code>
+                        <b>diccionario = {<br>
+                            "nombre" : "Thiago",<br>
+                            "objeto" : "Armario",<br>
+                            "verdad" : True,<br>
+                            "altura" : 1.85<br>
+                        }<br>
+                        print(diccionario["nombre"])<br></b>
+                    </code>
+                    Este ejemplo es lo mismo que la lista pero en ves de nomrarlos con numeros, las etiquetamos con texto. Para que se entienda mejor, les voy a mostrar un ejemplo de como si fuera una lista: <br>
+                    <code>
+                        <b>diccionario = {<br>
+                            "0" : "Thiago",<br>
+                            "1" : "Armario",<br>
+                            "2" : True,<br>
+                            "3" : 1.85<br>
+                        }<br>
+                        print(diccionario["0"])<br></b></b>
+                    </code>
+                    Este ejemplo es lo mismo que el <a href="#ejemplo-lista">ejemplo de la lista</a>
+                </p>
+            </li>
+            <li><h3>Diccionario 2.0</h3>
+                <p>
+                    También puedes crear un diccionario con una función: <br>
+                    <code>
+                        datos = dict(nombre="Andrea", apellido=“Ribeiro”, edad=24)<br>
+                        print(datos) <span class="anotador_de_codigo">#Mostrará {'nombre': 'Andrea', 'apellido': 'Ribeiro', 'edad': '24'}</span><br>
+                    </code>
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<h1 class="p-titulo-horizontal" style="color: black;">-Operadores</h1>
+<section>
+    <div>
+        <h1 style="margin:0;">Operadores aritméticos</h1>
+        <h2 style="padding-bottom: 20px;">(operaciones matematicas en python)</h2>
+        <p>
+            <img style="width: 800px;" src="Imagenes/Operadores-aritmeticos.webp">
+        </p>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Operadores de comparacion</h1>
+        <p>
+            <img src="Imagenes/ope-relacionales.webp" style="width: 800px;">
+        </p>
+    </div>
+</section>
+
+<section>
+    <div>
+        <h1>Operadores lógicos</h1>
+        <ul>
+            <p>
+                Todos los operadores lógicos devuelven valores booleanos (True o False)
+            </p>
+            <li class="li-general"><h3>And</h3>
+                <p>
+                    Devuelve True solo si ambas condiciones son true.<br>
+                    And es lo mismo que "&".<br> 
+                    Por ejemplo:<br>
+                    <code>
+                        <b>x=7<br>
+                            y=2<br>
+                        Resultado =  x==7 & y==1<br></b>
+                    </code>
+                    Mostrará "False" porque el valor de y es 2 y no es igual a 1. Para que muestre "True", tienen que ser las dos condiciones verdaderas (En este caso sería si y==2 en ves de y==1).
+                </p>
+            </li>
+            <li class="li-general"><h3>Or</h3>
+                <p>
+                    Devuelve True si se cumple alguna de las dos condiciones.
+                    Or es lo mismo que "|" .<br>
+                    Por ejemplo:<br>
+                    <code>
+                        <b>x=7<br>
+                            y=2<br>
+                        Resultado =  x==7 | y==1<br></b>
+                    </code>
+                    Mostrará "True" porque se cumple una de las dos condiciones (x==7).
+                </p>
+            </li>
+            <li class="li-general"><h3>NOt</h3>
+                <p>
+                    Devuelve True si no se cumple la condición.
+                    Por ejemplo:<br>
+                    <code>
+                        <b>x=7<br>
+                            y=2<br>
+                        Resultado =  not x==7<br></b>
+                    </code>
+                        Mostrará "False" porque se cumple la condición (not x==7).
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Condicionales</h1>
+        <ul>
+            <li><h3>If y else</h3>
+                <p>
+                    si se cumple la condicion, ejecuta una accion. La estructura es:<br>
+                    <span style="color: darkmagenta;">If</span><span style="color: blue;"> condicion</span>: <br>
+                    <span style="padding-left: 30px;">accion</span> <br>
+                    -Por ejemplo: <br>
+                    <code>
+                        <b>If 10>=4: <br>
+                            <span style="padding-left: 30px;">print("es verdad")</span><br>
+                            else: <br>
+                            <span style="padding-left: 30px;">print("es mentira")</span><br>
+                            Acá estamos diciendo que si 10 es mayor o igual a 4, mostrará "es verdad", y si no lo es, mostrará "es mentira".
+                         </b>
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Elif</h3>
+                <p>
+                    Es como el if pero con una condicion adicional. Se utiliza cuando queremos que haga algo mas especifico que lo que dice el if.<br>
+                    Es como el if pero solo se ejecutara si la primera condicion no se cumple. Es como una segunda chance del If.<br>
+                    Ejemplo: <br>
+                    <code>
+                        <b>numero = int(input("ingrese un numero"))<br>
+                            if numero == 5: <br>
+                            <span style="padding-left: 30px;">print ("el numero es 5")</span><br>
+                            elif numero == 6: <br>
+                            <span style="padding-left: 30px;">print ("el numero es 6")</span><br>
+                             else: <br>
+                             <span style="padding-left: 30px;">print ("el numero no es 5 ni 6")</span><br>
+                           </b>
+                    </code>
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section>
+    <div>
+        <h1>Algunas funciones</h1>
+        <p>
+            Estructura: <span style="color: rgb(129, 129, 4);"> nombre_de_la_función</span><b>(</b>Parametros<b>)</b>
+        </p>
+        <li class="li-general"><h3 id="ejemplo-lista">Print</h3>
+            <p>
+                Muestra (en la consola) el contenido de una variable. <br>
+             <code><b>print("Lucas" in bienvenida) <span class="anotador-de-codigo">#true</span><br>
+                print ("Lucas" not in bienvenida) <span class="anotador-de-codigo">#false</span></b><br></code>
+                En estos dos ejemplos le estamos diciendo a la maquina  que busque si "Lucas" esta o no esta en la cadena de texto y muestre True (si está) o False (si no está).
+        </li>
+        <li class="li-general"><h3>Type</h3>
+            <p>
+                Muestra (en la consola) el tipo de dato del elemento .<br>
+                Dos ejemplos: <br>
+                <code><b>print(type(5))<span class="anotador-de-codigo">#te mostrará int</span><br>
+                 print(type("Hola")) #te mostrará str(string)</b></code>
+            </p>
+        </li>
+        <li class="li-general"><h3>Dir</h3>
+            <p>
+                Muestra la dirección en memoria de una variable.<br>
+                <code><b>dir(lenguaje_programacion)<span class="anotador-de-codigo">#devuelve una lista con las propiedades.</b></code></span> <br>
+                <code><b>dir()<span class="anotador-de-codigo">#muestra todas las variables y funciones definidas hasta ahora</b></code></span> <br>
+            </p>
+        </li>
+        <li class="li-general"><h3>Len</h3>
+            <p>
+                Muestra la cantidad de caracteres que tiene una cadena, y la cantidad de elementos (palabras se podría) que tiene una lista. <br>
+                <code><b>
+                    Nombre = "Thiago Miranda Liotto" <br>
+                    prueba_len =  len(Nombre) <br>
+                    print(prueba_len) <span class="anotador-de-codigo"># Te mostrará "20"</span>
+                </b></code> <br>
+                Otro ejemplo usando una lista: <br>
+                <code>
+                    <b>
+                        Amigos = ["Juan", "Pedro","María"] <br>
+                        print(len(Amigos)) #Te mostrará "3", porque en una lista el "len()" cuenta la cantidad de elementos que hay.<br>
+                    </b>
+                </code>
+            </p>
+        </li>
+    </div>
+</section>
+<section>
+    <h1 class="p-titulo-horizontal" style="color: black;">-MÉTODOS</h1>
+        <div>
+            <h1>Métodos de cadenas</h1>
+            <p>
+                Son funciones para usar en las cadenas de texto ("esto es una cadena de texto" las cadenas de texto tienen que ir con parentesis), como por ejemplo buscar si un carácter o palabra está dentro de ella, cuántas veces aparece una letra o palabra, etc. <br>
+                Estructura:<span style="color: rgb(129, 129, 4);"> Variable</span><span style="color: brown;">.</span><span style="color: blue;">Método_de_cadenas</span><b>(</b>Parametros<b>)</b>
+            </p>
+            <div>
+                <li class="li-general"><h3>Upper</h3>
+                    <p>
+                        Devuelve una cadena con todos los caracteres en mayúsculas.<br>
+                        Por ejemplo:<br>
+                        <code>
+                            thiago = "Hola Como Estas".upper() <br>
+                            print(thiago) <span class="anotador-de-codigo">#Te mostrará "HOLA COMO ESTAS"</span>
+                        </code>
+                    </p>
+                </li>
+                <li class="li-general"><h3>Lower</h3>
+                    <p>
+                        Devuelve una cadena con todos los caracteres en minúsculas.<br>
+                        Por ejemplo:<br>
+                        <code>
+                            resultado = "Hola Como Estas".lower() <br>
+                            print(resultado) <span class="anotador-de-codigo">#Te mostrará "hola como estas"</span>
+                        </code>
+                    </p>
+                </li>
+                <li class="li-general"><h3>Capitalize</h3>
+                    <p>
+                        Devuelve una cadena con el primer caracter en mayúscula y los demas en minúscula.<br>
+                        Por ejemplo:<br>
+                        <code>
+                            cadena1 = "hola Como ANDAs" <br>
+                            resultado = cadena1.capitalize() <br>
+                            print(resultado) <span class="anotador-de-codigo">#Te mostrará "Hola como andas"</span>
+                        </code>
+                    </p>
+                </li>
+            </div>
+            <div>
+                <li style="padding-top: 30px;"><h3>Find</h3>
+                    <p>
+                        Busca un elemento/texto dentro de la cadena, si lo encuentra devuelve su posición (número de carácter), sino devuelve "-1".<br>
+                        Por ejemplo:<br>
+                        <code>
+                            cadena1 = "Hola como andas" <br>
+                            nashe = cadena1.find("l") <br>
+                            print(nashe) <span class="anotador-de-codigo">#Te mostrará "2", porque la letra 'l' se encuentra a partir de la casilla 2. Acuerdense que las casillas arrancan del "0" en adelante, y los espacios tambien cuentan como casillas.</span><br>
+                        </code>
+                    </p>
+                </li>
+                <li class="li-general"><h3>Index</h3>
+                    <p>
+                        Hace lo mismo que "find", la única diferencia es que si no encuentra nada en ves de devolverte <code>"-1"</code>, te dará un error (<code>una exception</code>).<br>
+                    </p>
+                </li>
+            </div>
+            <div>
+                <li style="padding-top: 30px;"><h3>Isnumeric</h3>
+                    <p>
+                        Verifica si la cadena solo contiene números. Si solo contiene numeros devuelve True, sino False.<br>
+                        Por ejemplo: <br>
+                        <code>
+                            edad = "25" <br>
+                            nashe = edad.isnumeric() <br>
+                            print(nashe) <span class="anotador-de-codigo">#Te mostrará "True", porque la variable edad es un número.</span>
+                        </code>
+                    </p>
+                </li>
+                <li><h3>Isalpha</h3>
+                    <p>
+                        Verifica si la cadena solo contiene letras. Los espacios y caracteres especiales como la coma no cuentan como letras. Entonce si solo contiene letras devuelve True, sino False. <br>
+                        <code>
+                            nombre = "JuanPablo" <br>
+                            que_nombre = nombre.isalpha()<span class="anotador-de-codigo">#Te mostrará "True", porque la variable nombre son solo letras.</span> <br> 
+                            print(que_nombre)
+                        </code> 
+                    </p>
+                </li>
+            </div>
+            <div>
+                <li style="padding-top: 30px;"><h3>Count</h3>
+                    <p>
+                        Devuelve el número de veces que se repite un carácter o una palabra en una cadena.<br>
+                        Por ejemplo: <br>
+                        <code>
+                            frase = "Esto es una prueba de la función count()" <br>
+                            variable2 = frase.count("e") <span class="anotador-de-codigo">#Te mostrará "3" porque hay tres letras "e" en la variable.</span><br>
+                            variable3 = frase.count("prueba") <span class="anotador-de-codigo">#Te mostrará "1" porque está la palabra "prueba" una ves sola en la variable.</span>
+                            print(variable2) <br>
+                            print(variable3) 
+                        </code> 
+                    </p>
+                </li>
+                <li style="padding-top: 30px;"><h3>Endswith</h3>
+                    <p>
+                        Verifica si una cadena termina con una determinada secuencia de caracteres. Devuelve True o False.<br>
+                        Por ejemplo: <br>
+                        <code> 
+                            cadena1 = "Hola, cómo estás?" <br>
+                            Prueba_endswith = cadena1.endswith(estás?) <br>
+                            print(Prueba_endswith)  #Mostrará "True"<br>
+                        </code>
+                    </p>
+                </li>
+                <li><h3>Startwith</h3>
+                    <p>
+                        Verifica si una cadena empieza con una determinada secuencia de caracteres. Devuelve True o False. <br>
+                    </p>
+                </li>
+            </div>
+            <div>
+                <li style="padding-top: 30px;"><h3>Replace</h3>
+                    <p>
+                        Reemplaza una parte de una cadena por otra.<br>
+                        Tiene dos partes este método: .replace("<span class="anotador-de-codigo">cadena-que-quiero-reemplazar</span>", "<span class="anotador-de-codigo">cadena-nueva</span>").<br>
+                        Por ejemplo: <br>
+                        <code>
+                            cartita_papa_noel =  "Hola papa noel, para navidad quiero un auto de juguete" <br>
+                            nueva_cadena = cartita_papa_noel.replace("auto de juguete", "reloj") <br>
+                            print(nueva_cadena) <span class="anotador-de-codigo">#Mostrará "Hola papa noel, para navidad quiero un reloj"</span>
+                        </code>
+                    </p>
+                </li>
+                <li><h3>Split</h3>
+                    <p>
+                        Te hace una lista con todas las palabras separadas por un signo (por defecto es el espacio). Osea, te permite dividir una cadena en varias partes según un separador (por defecto el espacio).<br>
+                        Por ejemplo: <br>
+                        <code>
+                           frase = "Este es un ejemplo de la función split() de Python" <br>
+                           palabras = frase.split() <br>
+                           print(palabras)  <span class="anotador-de-codigo">#Mostrará ['Este', 'es', 'un', 'ejemplo', 'de', 'la', 'función', 'split()', 'de', 'Python'] osea hizo una lista con todas las palabras que tenía la cadena.</span><br>
+                        </code>
+                    </p>
+                </li>
+                <li><h3>Join</h3>
+                    <p>
+                        Hace un string/cadena de texto, con una lista, osea unifica los elementos de la lista que pongamos en un string.<br>
+                        Por ejemplo: <br>
+                        <code>
+                           frase = ['Este', 'es', 'un', 'ejemplo', 'de', 'la', 'función', 'join()', 'de', 'Python'] <br>
+                           palabras = "".join(frase) <span class="anotador-de-codigo">#Todo lo que se ponga entre los "" será la separacion de cada elemento de la lista</span><br>
+                           print(palabras)  <span class="anotador-de-codigo">#Mostrará "Este es un ejemplo de la funcion join() de Python", osea hizo un string con todos los elementos que tenia la lista, separandolos con un espacio.</span><br>
+                        </code>
+                    </p>
+                </li>
+            </div>
+        </div>
+        <div>
+            <h1>Métodos de lista</h1>
+            <p>
+                Son funciones para usar en las listas, como por ejemplo agregar o eliminar elementos de una lista, buscar un elemento en una lista, etc. <br>
+                Estructura:<span style="color: rgb(129, 129, 4);"> Variable</span><span style="color: brown;">.</span><span style="color: blue;">Método_de_lista</span><b>(</b>Parametros<b>)</b>
+            </p>
+            <li><h3>Append</h3>
+                <p>
+                     Agrega un elemento a la última posición de la lista. <br>
+                     Ejemplo: <br>
+                     <code>
+                       numeros = [2,4,6] <br>
+                       numeros.append(8) <br>
+                       print(numeros) <span class="anotador-de-codigo">#Mostrará "[2,4,6,8]"</span>
+                     </code>
+                </p>
+            </li>
+            <li><h3>Insert</h3>
+                <p>
+                    Agrega un elemento en cualquier posición especificada de la lista.<br>
+                    Primero pones la posicion donde quieres que se inserte el nuevo elemento y luego el dato.<br>
+                    Ejemplo:<br>
+                    <code>
+                      numeros = [2,4,6] <br>
+                      numeros.insert(1,Hola) <span class="anotador-de-codigo">#insert(POSICION,DATO)</span><br>
+                      print(numeros) <span class="anotador-de-codigo">#Mostrará "[2,Hola,4,6]"</span>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Pop</h3>
+                <p>
+                    Elimina un elemento en cualquier posición específicada de la lista, es casi igual a "insert". <br>
+                    Si no se indica ninguna posición, elimina el último elemento. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        numeros = [2,4,6] <br>
+                        numeros.pop(2) <br>
+                        print(numeros) <span class="anotador-de-codigo">#Mostrará "[2,4]", porque eliminó el elemento en la posición 2 de la lista.</span> 
+                    </code>
+                </p>
+            </li>
+            <li><h3>Remove</h3>
+                <p>
+                    Elimina un elemento de la lista según su nombre. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        numeros = [2,"hola",1,5,"Thiago",8,"escalera"] <br>
+                        numeros.remove(5) <br>
+                        print(numeros) <span class="anotador-de-codigo">#Mostrará "[2,"hola",1,"Thiago",8,"escalera"]"</span>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Extend</h3>
+                <p>
+                    Agrega una lista (con elementos) a otra lista. <br>
+                    El método extend no modifica la lista original, sino que agrega los nuevos elementos a ella. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        lista1 = [0, 1, 2] <br>
+                        lista2 = [3, 4, 5] <br>
+                        lista1.extend(lista2) <br>
+                        print(lista1) <span class="anotador-de-codigo">#Mostrara "[0, 1, 2, 3, 4, 5]"</span>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Clear</h3>
+                <p>
+                    Elimina todos los elementos de una lista. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        numeros = [2,4,6] <br>
+                        numeros.clear() <br> 
+                        print(numeros) <span class="anotador-de-codigo"># Mostrará "[]", porque eliminó todos los elementos de la lista</span>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Sort</h3>
+                <p>
+                    Ordena la lista en un orden específico, por defecto las ordena de menor a mayor. No funciona con cadenas de texto. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        numeros = [7,2,9,1,5,3,False] <br>
+                        numeros.sort() <br>
+                        print(numeros) <span class="anotador-de-codigo">#Mostrará "[False, 1, 2, 3, 5, ,7 ,9]".</span> <br>
+                    </code>
+                    También se puede ordenar de mayor a menor con el parametro <code>reverse=True</code>: <br>
+                    <code>
+                        numeros = [7,2,9,1,5,3,False] <br>
+                        numeros.sort(reverse=True) <br>
+                        print(numeros) <span class="anotador-de-codigo">#Mostrará "[9, 7, 5, 3, 2, 1, False]".</span> <br>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Reverse</h3>
+                <p>
+                    Invierte la posición de los elementos en una lista. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        numeros = [7,2,9,1,5,3,False] <br>
+                        numeros.reverse() <br>
+                        print(numeros) <span class="anotador-de-codigo">#Mostrará "[False, 3, 5, 1, 9, 2, 7]"</span><br>
+                    </code>
+                </p>
+            </li>
+        </div>
+        <div>
+            <h1>Métodos de diccionario</h1>
+            <p>
+                Son funciones para usar en diccionarios. <br>
+                Estructura: <span style="color: rgb(129, 129, 4);"> Variable</span><span style="color: brown;">.</span><span style="color: blue;">Método_de_diccionario</span><b>(</b>Parametros<b>)</b>
+            </p>
+            <li><h3>Keys</h3>
+                <p>
+                     Devuelve una vista de las claves del diccionario. Las claves son los elementos que estan delante de los ":".<br>
+                     Por ejemplo: <br>
+                     <code>
+                        mi_diccionario = { <br>
+                            'nombre':'Juan', <br>
+                            'apellido':'Pérez' <br>
+                            } <br>
+                        nashe = mi_diccionario.keys() <br> 
+                        print(nashe) <span class="anotador-de-codigo">#Mostrará ['nombre', 'apellido']</span> <br>
+                     </code>
+                </p>
+            </li>
+            <li><h3>Get</h3>
+                <p>
+                    Devuelve el valor asociado a una clave dada. Si no encuentra la clave devuelve un "None". <br>
+                    Por ejemplo: <br>
+                    <code>
+                        mi_diccionario = { <br>
+                            'nombre':'Juan', <br>
+                            'apellido':'Pérez' <br>
+                            } <br>
+                        nashe = mi_diccionario.get("apellido") <br> 
+                        print(nashe) <span class="anotador-de-codigo">#Mostrará ["Perez"], porque le pasamos su clave "apellido".</span> <br>
+                    </code>
+                </p>
+            </li>
+            <li><h3>Clear</h3>
+                <p>
+                    Elimina todos los elementos del diccionario. Ya lo vimos anteriormente <br>
+                </p>
+            </li>
+            <li><h3>Pop</h3>
+                <p>
+                    Elimina un elemento en cualquier posición específicada del diccionario. Ya lo vimos anteriormente <br>
+                </p>
+            </li>
+            <li><h3>Items</h3>
+                <p>
+                    Devuelve una lista con pares clave-valor. Es como si hicieramos un zip entre las llaves y los valores. <br>
+                    Por ejemplo: <br>
+                    <code>
+                        mi_diccionario = { <br>
+                            'nombre':'Juan', <br>
+                            'apellido':'Pérez' <br>
+                            } <br>
+                        nashe = mi_diccionario.items() <br> 
+                        print(nashe) <span class="anotador-de-codigo">#Mostrará dict_items([('nombre', 'Juan'), ('apellido', 'Pérez')]).</span> <br>
+                    </code>
+                    Es otra forma que devuelva (clave:valor) de cada elemento en el diccionario. 
+                </p>
+            </li>
+        </div>
+    </section>
+    <section>
+        <h1 class="p-titulo-horizontal" style="color: black;">-DATA INPUTS/Entrada de datos</h1>
+        <div>
+            <li>
+                <h3>Input</h3>
+                <p>
+                    Devuelve una cadena con la entrada del usuario como texto.  No es muy útil para números o valores numéricos, pero si para cadenas. 
+                    Devuelve una cadena de texto que el usuario puede introducir por teclado. <br>
+                    Ejemplo: <br>
+                    <code>
+                        nombre = input("Introduce tu nombre: ") <span class="anotador-de-codigo">#La consola te mostrará "Introduce tu nombre: ", y te dará un espacio al final para que escribas lo que quieras.</span><br> 
+                    </code>
+                    Lo que escribiste al final se guardará como la variable "nombre". <br>
+                </p>
+            </li>
+        </div>
+    </section>
+    <section>
+        <h1>Variable 2.0</h1>
+        <div>
+            <p>Hay otra forma de adquirirle una variable a un elemento:</p> <br>
+        <ul>    
+            <li>
+                <p>
+                    Puedes adquirir una variable a un elemento dentro del diccionario, lista o tupla. Usando las variables separadas por comas y sin espacios. <br>
+                    Por ejemplo: <br>
+                <code>
+                    datos = ("Thiago","Miranda",16) <br>
+                    nombre, apellido, edad = datos <span class="anotador-de-codigo">#<-------Esta variable tiene que ser igual a la del diccionario/tupla/lista.</span><br>
+                        <span style="padding-left: 30px;">print(f"El nombre del usuario es {nombre} y su apellido es {apellido}, tiene {edad} años.") <span class="anotador-de-codigo">#Mostrará El nombre del usuario es Thiago y su apellido es Miranda, tiene 16 años.</span></span>
+                </code>
+                </p>
+            </li>
+        </ul>
+        </div>
+    </section>
+    <section>
+        <h1>FOR LOOP</h1>
+        <div>
+            <p>
+                For  loop es una construcción de bucle, es decir, permite repetir una sección de código varias veces. Osea lee tu codigo hasta que llega a el FOR LOOP y vuelve a leer el código pero sin repetir "exactamente" lo mismo que antes: <br>
+                Por ejemplo: <br>
+                <code>
+                    Participante1 =  ("Elefante","Mono","Jirafa","Tortuga","Pez","Perro","León") <br>
+                    for Datos in Participante1: <br>
+                    <span style="padding-left: 30px;">print(Datos)</span> <span class="anotador-de-codigo">#Mostrará "Elefante Mono Jirafa Tortuga Pez Perro León" uno debajo del otro, porque lee todo el código y muestra Elefante (porque es el primero), después vuelve a leer el código y muestra Mono (porque es el segundo), y así sucesivamenete.</span><br> 
+                </code>
+                Este ejemplo pasa porque la primera ves q lo lee, recibe Elefante, luego Mono... Así sucesivamente. <br> <br>
+            </p>
+        </div>
+        <div>
+            <h4>Pero como hacemos si queremos iterar (mostrar) dos o más listas al mismo tiempo?</h4>
+            <p>
+                Para eso se utiliza el "zip" con el  FOR LOOP, así: <br>
+                <code>
+                    Participante1 = ("Elefante","Mono","Jirafa","Tortuga","Pez","Perro","León") <br>
+                    Participante2 = ("Esmeralda","Kiko","Nutria","Cangrejo","Gallina","Zorro","Lince") <br>
+                    for aliado, oponente in zip(Participante1, Participante2): <br>
+                    <span style="padding-left: 30px;">print(f"El {aliado} es el oponente del {oponente}") <span class="anotador-de-codigo">#Mostrará "El Elefante es el oponente del Esmeralda" "El Mono es el oponente del Kiko" "El Jirafa es el oponente del Nutria" así uno debajo del otro</span></span> <br>
+                </code> <br>
+            </p>
+        </div>
+        <div>
+            <h3>Range</h3>
+            <p>
+                Devuelve números desde un valor inicial hasta otro valor final, y solo se puede usar con FOR LOOP: <br>
+                for numeros in range(5,44): <br>
+                <span style="padding-left: 30px;">print(numeros)</span><span class="anotador-de-codigo">#Mostrará todos los numeros del 5 al 44.</span> <br> <br>
+            </p>
+        </div>
+        <div>
+            <h3>Items</h3>
+            <p>
+                Tambien se puede utilizar el metodo de diccionario "items" en FOR LOOP: <br>
+                <code>
+                    mi_diccionario = {'cero':0,'siete':7} <br>
+                    for datos in mi_diccionario.items(): <br>
+                    <span style="padding-left: 30px;">clave = datos[0]</span> <br>
+                    <span style="padding-left: 30px;">valor = datos[1]</span> <br>
+                    <span style="padding-left: 30px;">print(f"La clave es {clave} y el valor es {valor}")</span><span class="anotador-de-codigo">#Mostrará "La clave es cero y el valor es 0" "La clave es siete y el valor es 7" uno debajo del otro</span> 
+                </code><br><br>
+            </p>
+        </div>
+        <div>
+            <h3>Continue</h3>
+            <p>
+                La sentencia "continue" pasa a la siguiente iteración del bucle sin ejecutar las líneas siguientes. Osea si hay un "continue" lo que sigue no se ejecutará.<br>
+                Por ejemplo: <br>
+                <code>
+                    Participante1 =  ("Elefante","Mono","Jirafa","Tortuga","Pez","Perro","León") <br>
+                    for Datos in Participante1: <br>
+                    <span style="padding-left: 30px;">if Datos == "Perro":</span><br>
+                    <span style="padding-left: 60px;">continue</span> <br>
+                    <span style="padding-left: 30px;">print(Datos)</span> <span class="anotador-de-codigo">#Mostrará "Elefante Mono Jirafa Tortuga Pez León" uno debajo del otro, sin el "perro", ya que si "datos" es igual a perro y debajo dice "continue" el codigo que sigue no se ejecutará, osea no se mostrará "perro".</span><br> 
+                </code> <br>
+            </p>
+        </div>
+        <div>
+            <h3>Break</h3>
+            <p>
+                Es parecido a Continue pero en ves de terminar la iteracion, directamente termina con la ejecucion del bucle. Osea todas las siguientes iteraciones del bucle no se harán.<br>
+                Por ejemplo: <br>
+                <code>
+                    Participante1 =  ("Elefante","Mono","Jirafa","Tortuga","Pez","Perro","León") <br>
+                    for Datos in Participante1: <br>
+                    <span style="padding-left: 30px;">if Datos == "Jirafa":</span><br>
+                    <span style="padding-left: 60px;">break</span> <br>
+                    <span style="padding-left: 30px;">print(Datos)</span> <span class="anotador-de-codigo">#Mostrará "Elefante Mono" uno debajo del otro, muestra todo lo anterior a la "Jirafa", ya que si "datos" es igual a Jirafa y debajo dice "break", el bucle directamente se detendrá, osea no se mostrará "Jirafa" ni lo que sigue.</span><br> 
+                </code> <br>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h1>BUCLE WHILE</h1>
+        <div>
+            <p>
+                El bucle While funciona de la siguiente manera, MIENTRAS que una condicion sea verdadera sigue ejecutandose el codigo que está debajo, pero MIENTRAS la condicion no sea verdadera el codigo que está debajo no se ejecutará. <br>
+                Por ejemplo: <br>
+                <code>
+                     Dia = 1 <br>
+                     while Dia <=30 :<br>
+                     <span style="padding-left: 30px;">print(f"Hoy es el dia: {Dia}")</span> <br>
+                     <span style="padding-left: 30px;">Dia +=1</span><span class="anotador-de-codigo">#Mostrará "Hoy es el dia: 1" "Hoy es el dia: 2" "Hoy es el dia: 3" así sucesivamente hasta llegar a el dia 30.</span> <br>
+                </code>
+            </p>
+        </div>
+    </section>
+    <section>
+        <h1>FUNCIONES INTEGRADAS</h1>
+        <div>
+            <p>
+                Existen funciones integradas que funcionan igual que las funciones comunes: <br>
+                La ESTRUCTURA es la misma que las "funciones": <span style="color: rgb(129, 129, 4);">funcion_integrada</span>(parametros/variables).
+            </p>
+            <li class="li-general"><h3>Max y min</h3>
+                <p>
+                     Devuelven el máximo o mínimo de una lista/tupla/conjunto con numeros. <br>
+                     Ejemplo: <br>
+                     <code>
+                        numeros = (1,32,5,6,7,12) <br>
+                        numero_mas_alto = max(numeros) <br>
+                        print(numero_mas_alto)  <span class="anotador-de-codigo">#Mostrará "32"</span><br>
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Round</h3>
+                <p>
+                    Redondea un número a la cantidad de decimales que se indique. Las decimales se indican después del numero, asi: "round(10.123,<span style="color: red;">2</span>)". <br>
+                    Ejemplo: <br>
+                    <code>
+                        numero = round(12.421,2) <br>
+                        print(numero) <span class="anotador-de-codigo">#Mostrará "12.42" porque le dijimos que redondee dos numeros despues de la coma</span><br>
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Bool</h3>
+                <p>
+                    Devuelve verdadero o falso. <br>
+                    Mostrará <span style="color: rgb(255, 0, 0);">False</span> cuando la variable sea 0, None, False o este vacía. <br>
+                    Mostrará <span style="color: rgb(0, 100, 0);">True</span> cuando la variable sea un numero distinto a 0, una cadena cualquiera, True. <br>
+                    Si un elemento es verdadero y el resto es falso, devolverá True ya que si uno solo es verdadero es suficiente.
+                    Ejemplo: <br>
+                    <code>
+                        si_es_verdad = bool(0) <br>
+                        print(si_es_verdad)   <span class="anotador-de-codigo">#Mostrará False porque dentro del bool hay un 0.</span>
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>All</h3>
+                <p>
+                    Sigue las mismas reglas que la funcion Bool de arriba. La diferencia es devuelve True solo si todos los elementos son verdaderos. <br>
+                    Ejemplo: <br>
+                    <code>
+                        si_es_verdad = all([0,None,False,"hola"]) <br>
+                        print(si_es_verdad) <span class="anotador-de-codigo">#Mostrará True, porque aunque 0, None y False sean falsos, si hay un verdadero ("hola") es True.</span> 
+                    </code>
+                </p>
+            </li>
+            <li class="li-general"><h3>Sum</h3>
+                <p>
+                    Suma todos los elementos en un iterable. <br>
+                    Ejemplo: <br>
+                    <code>
+                        numeros = [1,2,3] <br>
+                        suma = sum(numeros) <br>
+                        print(suma) <span class="anotador-de-codigo"> #Mostrará "6"</span>
+                    </code>
+                </p>
+            </li>
+        </div>
+    </section>
+    <section>
+        <h1>CREANDO FUNCIONES</h1>
+        <div>
+            <p>
+                Todas las funciones que vimos anteriormente son funciones creadas por Python, pero tambien existen algunas funciones propias, creadas por nosotros. <br>
+                La ESTRUCTURA de las funciones propias es: <span style="color: rgb(8, 8, 156);">def</span> <span style="color: rgb(129, 129, 4);">cualquier_nombre</span>(parametros): <br>
+                <span style="padding-left: 450px; color:blueviolet;">todo-lo-que-</span> <br>
+                <span style="padding-left: 450px; color:blueviolet;">-hará-esta-función </span><br>
+                <span style="padding-left: 450px; color:blueviolet;">-cuando-se-reescriba</span><br>
+                Por ejemplo: <br>
+                <code>
+                    def saludar(nombre, sexo): <br>
+                    <span style="padding-left: 30px;">sexo = sexo.lower()</span> <br>
+                    <span style="padding-left: 30px;">if (sexo == "mujer"): </span><br>
+                    <span style="padding-left: 60px;">adjetivo = "reina"  </span><br>
+                    <span style="padding-left: 30px;">elif (sexo == "hombre"):  </span><br>
+                    <span style="padding-left: 60px;">adjetivo = "rey"    </span><br>
+                    <span style="padding-left: 30px;">else:</span><br>
+                    <span style="padding-left: 60px;">adjetivo = 'amor'</span><br> <br>
+                    <span style="padding-left: 30px;">print(f"Hola {nombre}, mi {adjetivo} ¿Como andas?")</span> <br>
+                    <span class="anotador-de-codigo">#Ahora cada ves que reescribamos la nueva función "saludar()", iniciará todo ese código:</span> <br>
+                    saludar("Thiago", "Hombre") <span class="anotador-de-codigo">#Mostrará "Hola Thiago, mi rey ¿Como andas?"</span> <br>
+                    saludar("Batián", "no binario") <span class="anotador-de-codigo">#Mostrará "Hola Batián, mi amor ¿Como andas?"</span> <br>
+                    saludar("Graciela", "MuJer") <span class="anotador-de-codigo">#Mostrará "Hola Graciela, mi reyna ¿Como andas?"</span> <br> <br>
+                </code>
+                Esto sirve mucho para simplificar codigo, ya que si quisieramos escribir este mismo codigo sin las funciones propias, tendríamos que reescribir 3 veces el código de arriba.
+            </p>
+        </div>
+        
+        <div>
+            <h2 class="li-general">RETURN</h2>
+            <p>
+                Se utiliza al final de la función para guardar el valor de una variable para retornarlo mas adelante.<br>
+                Ejemplo: <br>
+                <code>
+                    def saludar(nombre, sexo): <br>
+                    <span style="padding-left: 30px;">sexo = sexo.lower()</span> <br>
+                    <span style="padding-left: 30px;">if (sexo == "una mujer"): </span><br>
+                    <span style="padding-left: 60px;">adjetivo = "una reina"  </span><br>
+                    <span style="padding-left: 30px;">elif (sexo == "un hombre"):  </span><br>
+                    <span style="padding-left: 60px;">adjetivo = "un rey"    </span><br>
+                    <span style="padding-left: 30px;">else:</span><br>
+                    <span style="padding-left: 60px;">adjetivo = 'un amor'</span><br>
+                    <span style="padding-left: 30px;">return nombre + " es " + adjetivo</span><br> <span class="anotador-de-codigo">#Si en ves de "return" hubieramos puesto "print", cuando usemos la funcion creada mostrará lo que le hemos dicho en print. Pero con return, cuando usemos la función creada NO mostrará nada, para que muestre algo necesitaremos poner "print(participante_1)".</span>
+                    codigo <br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    codigo<br>
+                    participante_1 = saludar("Thiago", "hombre") <span class="anotador-de-codigo">#Mostrará "Thiago es un rey"</span><br>
+                    print(participante_1)<br>
+                </code>
+                Entonces, como funciona return? Guardando un valor de una funcion (como fue: <span style="color: crimson;">nombre + " es " + adjetivo</span>) con el nombre de la función misma, y luego retornarlo mas adelante, por eso es que puse "codigo" como si hubiera mucho codigo delante. <br>
+            </p> 
+        </div>
+        <div>
+            <h2 class="li-general">*Arg</h2>
+            <p>
+                El atributo Arg se utiliza para indicar el argumento que va a recibir la función. Esto hace que todos los parametros se convierten en una sola lista, osea en un solo elemento. <br>
+                Y siempre se pone en la ultima variable de la función. <br>
+                Ejemplo: <br>
+                <code>
+                    def funcion_args(*numeros) <br>
+                    <span style="padding-left: 30px;">return sum(numeros)</span> <span class="anotador-de-codigo">#Mostrará la suma del parametro que le pases dentro de la funcion_args</span> <br>
+                </code>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Lambda</h1>
+            <p>
+                Sirve para usar funciones rápidas y pequeñas, sin tener que crear una función completa. Es apta para una sola instrucción.<br>
+                ESTRUCTURA:  <span style="color: blue;">lambda</span> <span style="color: rgb(34, 106, 189);">parámetro_que_usarás</span> : acciones, variable_con_todos_los_elementos <br><br>
+                Ejemplo: <br>
+                <code>
+                     doble = lambda x : x * 2 <br>
+                     print(doble(5)) <span class="anotador-de-codigo">#Mostrará 10</span> <br>
+                </code>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Filter</h1>
+            <p>
+                Es una función que devuelve un elemento uno por uno, no una lista completa (con todos los elementos). <br><br>
+                Por ejemplo: <br>
+                <code>
+                    numeros = [1,3,4,6,8] <br>
+                    pares = filter(lambda x : x % 2 == 0 , numeros ) <span class="anotador-de-codigo">#Esto lo que hace es agarrar el primer número de la lista y devolver el resto de la division por 2, si el resto es igual a 0 será un numero par y se mostrará debajo, y si el resto de la división no es igual a 0 no se mostrará </span> <br>
+                    print(list(pares)) <span class="anotador-de-codigo">#Mostrará [4,6,8]</span> <br>
+                </code>
+            </p>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1>Random</h1>
+            <p>
+                Sirve para que te elija/dé una variable random. Hay que escribir "import random" al principio para llamarla: <br>
+                Ejemplo 1: <br>
+                <code>
+                    import random <br>
+                    print(random.randrange(0,100)) <span class="anotador-de-codigo">#Mostrará un numero random del 0 al 100</span><br>
+                </code>
+                Ejemplo 2: <br>
+                <code>
+                    import random <br>
+                    print(random.randrange(0,100,2)) <span class="anotador-de-codigo">#Mostrará un numero PAR random del 0 al 100, porque el ultimo numero del "randrange" indica de cuanto en cuanto vá a ir el random.</span> <br>
+                </code>
+                Ejemplo 3: <br>
+                <code>
+                    import random <br>
+                    concursantes = ["Thiago", "Bastian", "Lolo", "Ivan"]
+                    print(random.choice(concursantes)) <span class="anotador-de-codigo">#Mostrará un elemento de la lista random.</span> <br>
+                </code>
+                Ejemplo 4: <br>
+                <code>
+                    import random <br>
+                    abecedario = "abcdefghijklmnñopqrstuvwxyz" <br>
+                    print(random.sample(abecedario,4)) <span class="anotador-de-codigo">#Mostrará 4 letras del abecedario porque "random.sample" elige random la cantidad de caracteres que le digas de un string.</span> <br>
+                </code>
+            </p>
+        </div>
+    </section>
+    <section>   
+        <div>
+            <h1>Modulos</h1>
+            <p>
+                Un modulo son todos los archivos que terminan en ".py", para importar otro modulo a nuestro archivo .py debemos usar el comando "import". Entonces podremos usar todo el código de otro modulo en el nuestro. Osea con este comando puedes usar el código que ha hecho otra persona en el tuyo sin usar muchas líneas de código.<br>
+                Entonces cuando ya hayas puesto el comando arriba "import Nombre_del_archivo", ya puedes usar todas las funciones que tiene ese archivo: para usar estas hay que escribirlas como si fuera un método. <br>
+                Estructura: <code>
+                    <span style="color: rgb(105, 21, 184);">import</span> <span style="color:rgb(0, 104, 0);">nombredelmodulo</span><br>
+                    <span style="color:rgb(0, 104, 0);">nombredelmodulo</span>.<span style="color: rgb(158, 137, 16);">funcion_q_quieres_usar_q_está_dentro_del_modulo</span>(parametro_de_la_funcion)
+                </code>
+                Por ejemplo: <br>
+                <code>
+                    import archivo1 <br>
+                    print(archivo1.multiplicar(9)) <span class="anotador-de-codigo">#Mostrara "18" porque la función que importamos del otro módulo (archivo1) multiplicaba por 2.</span> 
+                </code>
+            </p>
+        </div>
+        <div>
+            <h2>As</h2>
+            <p>
+                Es para llamar de otra manera a un módulo importado: <br>
+                Por ejemplo: <br>
+                <code>
+                    import archivo1 as multiplica <br>
+                    print(multiplica.multiplicar(9)) <span class="anotador-de-codigo">#Mostrara "18" porque la función que importamos del otro módulo (ahora llamado tambien como "multiplica") multiplicaba por 2.</span>
+                </code>
+            </p>
+        </div>
+        <div>
+            <h1>From</h1>
+            <p>
+                Sirve para importar una sola cosa del módulo, así solo se importa una cosa (por ej: una función) y no todo el código del módulo. Y para llamar luego a esa función no es necesario construir la estructura de un método.<br>
+                Por ejemplo: <br>
+                <code>
+                    from archivo1 import suma, resta<br> <span class="anotador-de-codigo">#Llamamos a dos funciones de otro archivo llamado "archivo1"</span>
+                    numero1 = input("Ingrese el primer número: ")<br>
+                    numero2 = input("Ingrese el segundo número: ")<br>
+                    print(suma(numero1, numero2)) <br> 
+                    print(resta(numero1, numero2)) <br> <span class="anotador-de-codigo">#Mostrará la suma y la resta de los dos numeros</span>
+                </code>
+            </p>
+        </div>
+        <div>
+            <h1></h1>
+        </div>
+    </section>
+
+
+<footer class="footer">
+    <div class="footer-div1">
+      <div class="footer-div-row">
+        
+        <div class="footer-div-links">
+          <h4>Compañia</h4>
+          <ul>
+            <li><a href="HISTORIA.html">Nosotros</a></li>
+            <li><a href="HISTORIA.html">Nuestra historia</a></li>
+            <li><a href="Politica-de-privacidad.html">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="">Preguntas</a></li>
+            <li><a href="https://www.instagram.com/thiagoml43">Contactanos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="HTML.html">HTML</a></li>
+            <li><a href="CSS.html">CSS</a></li>
+            <li><a href="Atajos.html">ATAJOS</a></li>
+            <li><a href="PYTHON.html">PYTHON</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Síguenos</h4>
+          <div class="footer-social-link">
+            <a href="https://www.facebook.com/" TARGET="_BLANK"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thiagoml43" TARGET="_BLANK"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=es" TARGET="_BLANK"><i class="fab fa-twitter"></i></a>
+            <a href="https://ar.linkedin.com/" TARGET="_BLANK"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+</html>

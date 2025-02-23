@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Atajos | Enseprog</title>
+	<link rel="icon" href="Imagenes/IconoESEPRO.webp">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="atajos.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<script src="https://kit.fontawesome.com/83480b7348.js" crossorigin="anonymous"></script>
+</head>
+<body class="hidden">
+	<section class="section-loader" id="onload">
+	<!-- 
+	<div class="lavarropas">
+  
+	</div>
+	-->
+	<div class="spinner">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+  </section>
+	<header class="header">
+		<div class="container">
+			<div class="navbar">
+				<a href="Index.html"><img class="logo" src="Imagenes/logoESEPROatajos.webp" alt="logo"></a>
+				<ul class="ul-inicio">
+					<li><a href="index.html">INICIO</a></li>
+					<li><a href="HTML.html">HTML</a></li>
+					<li><a href="CSS.html">CSS</a></li>
+					<li><a href="PYTHON.html">PYTHON</a></li>
+				  </ul>
+			</div>
+		</div>
+	</header>
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+		var header = document.querySelector("header");
+		header.classList.toggle("abajo",window.scrollY>0);
+	})
+	function smoothScrollTo(targetElementId) {
+  const targetElement = document.getElementById("div-genrral");
+
+  if (targetElement) {
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    // Función de animación
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      let progress = timeElapsed / 1000; // Duración de la animación: 500ms
+      if (progress > 1) progress = 1;
+      
+      const newPosition = startPosition + (distance * easeInOutQuad(progress));
+      window.scrollTo(0, newPosition);
+      
+      if (progress < 1) requestAnimationFrame(animation);
+    };
+
+    // Función de easing
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + ((4 - (2 * t)) * t);
+    }
+
+    // Inicia la animación
+    requestAnimationFrame(animation);
+  }
+}
+	window.onload = function(){
+		$('#onload'). fadeOut();
+		$('body'). removeClass('hidden');
+}
+</script>
+
+<main class="hero-image">
+    <div class="div-1" data-bs-theme="dark">
+        <div class="div-1-1">
+			<a href="#div-genrral" onclick="smoothScrollTo('#div-genrral')">
+					<i class="fa-solid fa-arrow-down i"></i>
+				</div>
+			</a>
+        </div>
+    </div>
+</main>
+<main id="div-genrral" class="section-inicio">
+	<div class="conteiner-inicio">
+	  <h1>ATAJOS</h1>
+	  <p>A continuación estarán algunos atajos para ayudarte a no perder tiempo haciendo código.</p>
+	  <p>Esta página la puedes usar cuando no recuerdes como hacer algo.</p>
+	</div>
+</main>
+<section>
+	<h1 class="p-titulo-horizontal"></h1>
+	<p class="div-texto-horizontal">	
+		(idea para cuando edite esto en css: Hacer que los ejemplo esten en una seccion aparte. Tipo al lado pero tengas q tocar para ir a ellos y les direccione a otra pestaña, esto tiene que estar bien representado para que lo entiendan tipo con imagenes, capturas, capaz videos y todo)(otra idea q se me ocurrio es hacer lo mismo q el ejemplo pero con palabras distintas, tipo si no entendió algo explicarlo diferente)
+	</p>
+</section>
+	
+
+	<footer class="footer">
+		<div class="footer-div1">
+		  <div class="footer-div-row">
+			
+			<div class="footer-div-links">
+			  <h4>Compañia</h4>
+			  <ul>
+				<li><a href="HISTORIA.html">Nosotros</a></li>
+				<li><a href="HISTORIA.html">Nuestra historia</a></li>
+				<li><a href="Politica-de-privacidad.html">Política de privacidad</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Ayuda</h4>
+			  <ul>
+				<li><a href="">Preguntas</a></li>
+				<li><a href="https://www.instagram.com/thiagoml43">Contactanos</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Servicios</h4>
+			  <ul>
+				<li><a href="HTML.html">HTML</a></li>
+				<li><a href="CSS.html">CSS</a></li>
+				<li><a href="Atajos.html">ATAJOS</a></li>
+				<li><a href="PYTHON.html">PYTHON</a></li>
+			  </ul>
+			</div>
+	
+			<div class="footer-div-links">
+			  <h4>Síguenos</h4>
+			  <div class="footer-social-link">
+				<a href="https://www.facebook.com/" TARGET="_BLANK"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/thiagoml43" TARGET="_BLANK"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/?lang=es" TARGET="_BLANK"><i class="fab fa-twitter"></i></a>
+				<a href="https://ar.linkedin.com/" TARGET="_BLANK"><i class="fab fa-linkedin"></i></a>
+			  </div>
+			</div>
+	
+		  </div>
+		</div>
+	  </footer>
+	  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	  
+    <!--
+        <h1> ATAJOS</h1>
+        <div class="div-responsive">
+            <h2>
+                A continuación estarán algunos atajos para ayudarte a no perder tiempo haciendo código.
+            </h2>
+            <p> Como modificar varios codigos al mismo tienpo (remplazandolo por otros): CONTROL + F (el que quieres que se modifique) y CONTROL + H (por el que quieres). <br> 
+                Para hacer que un codigo este visible pero no funciona: (signo menor)!--elcodigodewfgqgqwegqq--(signo mayor) <br>
+                
+            </p>
+        </div>
+    -->
+</body>
+
+</html>

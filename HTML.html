@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Todo lo de HTML | Enseprog</title>
+	<link rel="icon" href="Imagenes/IconoESEPRO.webp">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style-html.css">
+	<script src="https://kit.fontawesome.com/83480b7348.js" crossorigin="anonymous"></script>
+</head>
+<body class="hidden">
+	<section class="section-loader" id="onload">
+	<!-- 
+	<div class="lavarropas">
+  
+	</div>
+	-->
+	<div class="spinner">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</div>
+  </section>
+<header class="header">
+	<div class="container">
+		<div class="navbar">
+			<a href="Index.html"><img class="logo" src="Imagenes/logoESEPROhtml.webp" alt="logo"></a>
+			<ul class="ul-inicio">
+				<li><a href="index.html">INICIO</a></li>
+				<li><a href="HTML.html">HTML</a></li>
+				<li><a href="CSS.html">CSS</a></li>
+				<li><a href="PYTHON.html">PYTHON</a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<!-- JAVASCRIPT -->
+<script type="text/javascript">
+	window.addEventListener("scroll", function() {
+		var header = document.querySelector("header");
+		header.classList.toggle("abajo",window.scrollY>0);
+	})
+	function smoothScrollTo(targetElementId) {
+  const targetElement = document.getElementById("div-genrral");
+
+  if (targetElement) {
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const distance = targetPosition - startPosition;
+    let startTime = null;
+
+    // Función de animación
+    const animation = (currentTime) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      let progress = timeElapsed / 1000; // Duración de la animación: 500ms
+      if (progress > 1) progress = 1;
+      
+      const newPosition = startPosition + (distance * easeInOutQuad(progress));
+      window.scrollTo(0, newPosition);
+      
+      if (progress < 1) requestAnimationFrame(animation);
+    };
+
+    // Función de easing
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : -1 + ((4 - (2 * t)) * t);
+    }
+
+    // Inicia la animación
+    requestAnimationFrame(animation);
+  }
+}
+	window.onload = function(){
+	  $('#onload'). fadeOut();
+	  $('body'). removeClass('hidden');
+	}
+</script>
+<main class="hero-image">
+    <div class="div-1" data-bs-theme="dark">
+        <div class="div-1-1">
+			<div id="down-arrow" class="my-section"></div>
+			<a class="A" href="#div-genrral" onclick="smoothScrollTo('#div-genrral')">
+					<i class="fa-solid fa-arrow-down i" ></i>
+			</a>
+		</div>
+    </div>
+</main>
+<main id="div-genrral" class="section-inicio">
+	<div class="conteiner-inicio">
+	  <h1>Todo lo de HTML</h1>
+	  <p>Aprende lo básico de la programación con este curso gratis para principiantes.</p>
+	  <p>Si ya sabes algo de programación esta página la puedes usar cuando no recuerdes como hacer algo.</p>
+	</div>
+</main>
+
+<section class="Section-horizontal">
+	<div class="div-1-horizontal">
+		<p class="p-titulo-horizontal">
+			<span><b>-</b>TODO LO QUE APRENDI DE HTML</span>
+		</p>
+	</div>
+	<div class="">
+
+		<img class="img-horizontal" src="Imagenes/maquetacion-email-html.webp">	
+		<div class="div-texto-horizontal">
+			
+			<h3><b>Aca voy a escribir todo lo que voy aprendiendo de HTML. <strike>Soy mayor de edad</strike>. Claramente no soy mayor de edad, cuando estoy escribiendo esto tengo 13 años.</b><br></h3>
+			<p>
+				Todo se empieza con estos signos < > y cada palabra hace una cosa distinta.<br>
+				Las principales son:
+				<ul>
+					<li>H1 es el titulo de la pagina, tambien se pueden escribir H2, H3, H4, H5 y H6.</li>
+					<li>P es para escribir algun parrafo</li>
+					<li><b>B es para escribir alguna palabra en negrita</b></li>
+					<li><i>I es para escribir una palabra Italica</i></li>
+					<li><strike>Strike es para escribir una palabra tachada</strike></li>
+					<li><small>Small es para escribir una palabra chiquita</small></li>
+				</ul>
+			</p>
+		</div>
+		
+	</div>
+</section>
+<section class="section-2">
+	<div class="div-general">
+		<div class="div-texto-horizontal">
+			<p>
+				También estan los enlaces.<br>
+				Si tu quieres que con un click te mande a otra pagina escribes <b>A</b>, por ej;<br>
+				<br>
+				Haz <a href="https://youtube.com" target="_BLANK">Click Aquí</a> para entrar a Youtube.<br>
+				Haz <a href="https://google.com">Click Aquí</a> para entrar a Google.<br>
+				Si quieres que no te cierre tu pagina web escribes <b>TARGET="_BLANK"</b><br>
+				<br>
+				<br>
+				Tambien se puede mandarte a una pagina tuya poniendo su <b>nombre</b> como por ej;<br>
+				<br>
+				Haz <a href="pagina2.html">click aquí</a> para entrar a la otra pagina.<br>
+				Y si quieres volver a la anterior pagina vuelves a poner el nombre de la anterior.
+				<br>
+			</p>
+		</div>
+	</div>
+</section>
+<section class="section-3">
+	<div class="div-texto-horizontal">
+		<p>Existen listas que se hacen escribiendo <b>UL</b>, que dentro de UL tienes que escribir <b>LI</b> que es para escribir los elementos de la lista.<br>
+			Por ej:</p>
+			<p>Listas de compras</p>
+		<ul>
+			<li> Una docena huevos </li>
+			<li> 1 paquete papas fritas </li>
+			<li> 3 paquetes de Hamburguesas </li>
+			<li> 2 paquetes de queso rallado </li>
+			<li> 1 cajita de tiktak </li>
+		</ul>
+		<p>Si quieres que enves de los puntos te ponga numeros tienes que escribis <b>OL</b>.<br>
+			Por Ej; </p>
+			<p>Las filas del signficado </p>
+		<ol>
+			<li>Esta todo lo frio</li>
+			<li>Esta todo lo caliente</li>
+			<li>Estan todas las galletitas y todo lo dulce</li>
+			<li>Esta todo lo salado</li>
+			<li>Estan todas las golosinas</li>
+		</ol>
+	</div>
+</section>
+<section class="section-4">
+	<div class="div-texto-horizontal">
+		<p>
+			Para poner una imagen tienes que escribir <b>IMG</b> y tienes que poner el nombre de su imagen.<br>
+			Por ej:<br>
+			<br>
+		</p>
+	</div>
+	<img class="img-horizontal" src="Imagenes/450_1000.webp">
+	<div class="div-texto-horizontal">
+		<p> 
+			<br>
+			<br>
+			Si quieres poner la imagen mas/menos ancha tienes que escribir <b>Width</b> y los pixeles que quieres<br>.
+			Y si quieres poner la imagen mas/menos larga tienes que escribir <b>Height</b>.<br>
+			<br>
+			<br>
+			Tambien se pueden poner videos, para eso necesitas poner <b>Video</b>. Despues de que hayas puesto video tienes que poner <b>SRC</b> dentro de el "Video". Tambien para tener el control del viedo necesitas poner <b>CONTROLS</b>, y con el <b>audio</b> es lo mismo.
+			Por ej:
+			<br>
+			<br>
+			<br>
+			<br>
+		</p>
+	</div>
+	<div class="div-texto-horizontal">
+		<p>
+			Despues esta el <b>DIV</b> que es casi igual al P la diferencia es que el P es para escribir parrafos largo en cambio div es para separar un mini texto o una frase. Pero lo correcto seria escribir el div y dentro del div escribir P o H1.<br>
+			Por ej:
+			<div>
+				<h4>Nombre del producto</h4>
+				<p>
+					Precio <b>$99</b>
+				</p>
+			</div>
+		</p>
+	</div>
+</section>
+<section class="section-5">
+	<div class="div-texto-horizontal">	
+		<p>
+			<b>¡Esto es importante!</b><br>
+			Si tu quieres poner un formulario tienes que escribir <b>FORM</b> y dentro de form puedes escribir input y dentro de input tienes que escribir:<br><b>Type TEXT</b>:
+			Que es para escribir texto.<br>
+			<b>Type PASSWORD</b>:
+			Que es para escribir contraseña. <br>
+			<b>Type NUMBER</b>:
+			Que es para escribir numeros. <br>
+			Y <b>Type EMAIL</b>:
+			Que es para escribir emails.<br>
+			Por ej: <br>
+			<form>
+				<input type="TEXT">
+				<input type="PASSWORD">
+				<input type="NUMBER">
+				<input type="EMAIL">
+			</form><br>
+			Tambien existen mas type como por ej:<br>
+			<b>Type COLOR</b><br>
+			Que es para que la persona que esta visitando la web elija algun color.<br>
+			<b>Type RANGE</b><br>
+			Que es para poner una linea, tambien puedes escribir <b>MIN</b> y <b>MAX</b> para poner los niveles que se mueve la linea.<br>
+			<b>Type DATE</b><br>
+			Que es para pone una fecha.<br>
+			<b>Type TIME</b><br>
+			Que es para poner una hora que quieras.<br>
+			<b>Type BUTTON</b><br>
+			Que es para poner un boton. Que dentro del boton se le tiene que agregar un nombre poniendo <b>VALUE</b>.<br>
+			<b>Type SUBMIT</b><br>
+			Que es para poner un boton de enviar.<br>
+			Aca esta el ejemplo de todo esto:<br>
+		<form>
+			<input type="color">
+			<input type="RANGE" min="1" max="5">
+			<input type="DATE">
+			<input type="TIME">
+			<input type="BUTTON" value="boton">
+			<input type="SUBMIT">
+		</form>
+		Existe un elemento que se pone al lado del input que es "placeholder=loquequieras", este hace que este escrito por defecto lo que quieras en un form. Por ejemplo: <br>
+		<form>
+			<input type="text" placeholder="esto es placeholder">
+		</form>
+		Tambien es importante que si quieres que el visitante de la web complete si o si el formulario necesitas poner <b>REQUIRED</b> dentro del imput que quieras. Todavia no llendonos del formato form esta el <b>TEXTAREA</b> que es para poner un texto con el tamaño que quiera el visitante, tambien se le puede agregar <b>READOLY</b> que es para que solo lo pueda leer y cambiar tamaño.
+		</p>
+	</div>
+</section>
+<section class="section-6">
+	<div class="div-texto-horizontal">
+		<p>
+		Ahora vamos a haber los metadatos que hay, los metadatos se ponen en el head:<br>
+		<b>META</b> y dentro de meta hay que escribir <b>CHARSET="utf-8"</b><br>
+		Lo que hace este metadato es que podamos poner acentos en nuestra pagina web. Despues del meta tienes que escribir name y content ahi pones lo que sigue como por ej:<br>
+		<b>META</b> name=author content="..."<br>
+		Esto sirve para que el visitante pueda ver el autor de la pagina.   <br><br>
+		<b>META</b> name=copyright content="..."<br>
+		Es para saber si su web tiene copyright.<br>
+		<br>
+		Ahora vienen lo meta para mi mas importantes por ej:<br>
+		<b>META</b> name="keywords" content="..."<br>
+		Esto sirve para cuando alguien escriba en el buscador de google las palabras que pongas en el <b>content=</b> aparesca tu pagina primera (supuestamente) y tambien hay otra meta que hace casi lo mismo que es:<br>
+		<b>META</b> name="description" content="..."<br>
+		Esto es lo mismo pero con descripsion mas larga.<br>
+		Para activar estas 2 cosas necesitas poner: <br>
+		<b>META</b> name="robots" content="index"<br>
+		Y si no quieres activar esto tienes que poner <b>noindex</b> en ves de <b>index</b>
+		</p>
+	</div>
+</section>
+<section class="section-7">
+	<div class="div-texto-horizontal">
+	<p>
+		Si quieres poner algo centrado pone <b>center</b>.<br>
+		<center>
+			Como aqui.
+		</center>
+		<br>Igual el <b>center</b> no es recomendable de usar.
+	</p>
+	<p>
+		Todo texto se puede identificar con <b>ID</b>.<br>
+		<br>
+		Como hacer para que el usuario acceda con un click a donde tu quieres.<br>
+		Como por ej:<br>
+		<a href="#codigo">Aca</a>
+		<br>Para hacer esto se necesita crear un texto donde quieras que te lleve, como h2, y dentro de él ponerle <b>ID</b> y el nombre que quieras (como CODIGO), luego tienes que poner <b>A</b> y dentro <b>#...</b> y su nombre (en este caso CODIGO), y le pones lo que quieras (como CLICK AQUI PARA SUBIR).<br>
+		Esto se puede usar como por ejemplo en una pagina de noticias, que dice haz click aquí para ir a la noticia 1, aqui para la 2 y asi sucesivamente.
+	</p>
+	<p>
+		Tambien se puede poner iconos como por ej: el de youtube. Para eso tienes que poner:<br>
+		<b>Link</b> y dentro <b>rel</b>, luego pones su atributo que en este caso es  <b>Icon</b>. Depues dentro de link ponemos <b>href</b> y su ruta al lado (por ej:Imagen_Thiago.ico). <b>IMPORTANTE</b>
+	</p>
+	</div>
+</section>
+
+<footer class="footer">
+    <div class="footer-div1">
+      <div class="footer-div-row">
+        
+        <div class="footer-div-links">
+          <h4>Compañia</h4>
+          <ul>
+            <li><a href="HISTORIA.html">Nosotros</a></li>
+            <li><a href="HISTORIA.html">Nuestra historia</a></li>
+            <li><a href="Politica-de-privacidad.html">Política de privacidad</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="">Preguntas</a></li>
+            <li><a href="https://www.instagram.com/thiagoml43">Contactanos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="HTML.html">HTML</a></li>
+            <li><a href="CSS.html">CSS</a></li>
+            <li><a href="Atajos.html">ATAJOS</a></li>
+			<li><a href="PYTHON.html">PYTHON</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-div-links">
+          <h4>Síguenos</h4>
+          <div class="footer-social-link">
+            <a href="https://www.facebook.com/" TARGET="_BLANK"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/thiagoml43" TARGET="_BLANK"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/?lang=es" TARGET="_BLANK"><i class="fab fa-twitter"></i></a>
+            <a href="https://ar.linkedin.com/" TARGET="_BLANK"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+</html>
